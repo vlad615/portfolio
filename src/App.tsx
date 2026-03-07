@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import { Header } from './styles/layout/Header';
 
 
 function App() {
-    return (
-        <div className="App">
-            
-        </div>
+    return (<>
+        <Header />
+        
+    </>
     );
 }
 

@@ -1,0 +1,32 @@
+import { styled } from "styled-components";
+import { Logo } from "../../components/Logo";
+import { Menu } from "../../components/Menu";
+
+export const Header = () =>{
+    return(
+        <StyledHeader>
+            <Logo />
+            <div style={{display: "flex", gap: '30px'}}>
+                <Menu />
+                <SytledSelect>
+                    <option value="english">EN</option>
+                    <option value="russian">RU</option>
+                    <option value="ukrainian">UA</option>
+                    <option value="belarusian">BE</option>
+                </SytledSelect>
+            </div>
+            
+        </StyledHeader>
+    )
+}
+
+const StyledHeader = styled.header`
+    display: flex;
+    justify-content: space-between;
+`
+
+const SytledSelect = styled.select.attrs(()=>({
+    name: 'language',
+    id: 'language'
+}))`
+`
