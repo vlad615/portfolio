@@ -2,8 +2,8 @@ import SvgSprite from '../accets/svg-sprite.svg';
 
 type IconsProps = {
     iconId: string;
-    width: string;
-    heigth: string;
+    width?: string;
+    heigth?: string;
 }
 
 export const Icon = (props: IconsProps) =>{

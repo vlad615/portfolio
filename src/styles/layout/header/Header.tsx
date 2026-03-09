@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
-import { Logo } from "../../components/Logo";
-import { Menu } from "../../components/Menu";
+import { Logo } from "../../../components/Logo/Logo";
+import { Menu } from "../../../components/Menu/Menu";
 
 export const Header = () =>{
     return(
