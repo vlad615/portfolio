@@ -21,6 +21,8 @@ export const Header = () =>{
 }
 
 const StyledHeader = styled.header`
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 `

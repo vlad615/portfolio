@@ -8,7 +8,7 @@ type ContactIconsProps = {
 
 export const ContactIcons = (props: ContactIconsProps) =>{
     return(
-        <StyledWrapper direction={props.direction || "row"} gap={props.gap || "10px"}>
+        <StyledWrapper direction={`${props.direction}` || "row"} gap={`${props.gap}` || "10px"}>
             <Icon iconId="tg"/>
             <Icon iconId="git"/>
             <Icon iconId="vk"/>
