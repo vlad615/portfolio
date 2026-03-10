@@ -10,6 +10,11 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    body{
+        min-width: 365px;
+        background-color: #282c33;
+    }
+
     ul, ol{
         list-style: none;
     }
