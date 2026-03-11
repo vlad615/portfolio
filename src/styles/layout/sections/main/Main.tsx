@@ -1,30 +1,30 @@
 import styled from "styled-components"
-import { StyledWrapper } from "../../../../components/Wrapper/FlexWrapper"
+import { FlexWrapper } from "../../../../components/Wrapper/FlexWrapper"
 import { ContactIcons } from "../../../../components/icons/ContactIcons"
-import { StyledSection } from "../../../../components/Wrapper/Container"
+import { ContainerSection } from "../../../../components/Wrapper/Container"
 import me from "../../../../accets/me.webp"
 
 export const Main = () => {
     return(
-        <StyledSection>
-            <StyledWrapper direction="column">
-                <StyledWrapper>
+        <ContainerSection>
+            <FlexWrapper direction="column">
+                <FlexWrapper>
                     <ContactIcons direction="column"/>
-                    <StyledWrapper direction="column">
+                    <FlexWrapper direction="column">
                         <h1>Vlad is a web developer and front-end developer</h1>
                         <p>He crafts responsive websites where technologies meet creativity</p>
                         <button>Contact me!!</button>
-                    </StyledWrapper>
+                    </FlexWrapper>
                     <Photo src={me} alt="Web Developer"/>
-                </StyledWrapper>
+                </FlexWrapper>
                 
-                <StyledWrapper direction="column">
+                <FlexWrapper direction="column">
                     <q>With great power comes great electricity bill</q>
                     <span>- Dr. Who</span>
-                </StyledWrapper>
+                </FlexWrapper>
                 
-            </StyledWrapper>
-        </StyledSection>
+            </FlexWrapper>
+        </ContainerSection>
 
     )
 }

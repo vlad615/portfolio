@@ -8,9 +8,12 @@ type FlexWrapperProps = {
     wrap?: string;
     gap?: string;
     maxwidth?: string;
+    minheight?: string
+    padding?: string;
+    border?: string;
 }
 
-export const StyledWrapper = styled.div<FlexWrapperProps>`
+export const FlexWrapper = styled.div<FlexWrapperProps>`
     display: flex;
     flex-direction: ${props => props.direction || "row"};
     justify-content: ${props => props.justify || "flex-start"};
@@ -18,5 +21,8 @@ export const StyledWrapper = styled.div<FlexWrapperProps>`
     flex-wrap: ${props => props.wrap || "nowrap"};
     gap: ${props => props.gap || "0px"};
     max-width: ${props => props.maxwidth || "none"};
+    min-height: ${props => props.minheight || "none"};
+    padding: ${props => props.padding || "none"};
+    border: ${props => props.border || "none"}
 
 `
