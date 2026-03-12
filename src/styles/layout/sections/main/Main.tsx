@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import { FlexWrapper } from "../../../../components/Wrapper/FlexWrapper"
+import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
 import { ContactIcons } from "../../../../components/icons/ContactIcons"
 import me from "../../../../accets/me.webp"
-import { StyledButton } from "../../../../components/Buttons/Buttons"
+import { StyledButton } from "../../../../components/Buttons"
 
 export const Main = () => {
     return(

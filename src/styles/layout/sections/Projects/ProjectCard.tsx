@@ -1,7 +1,6 @@
 import { styled } from "styled-components"
-import { FlexWrapper } from "../../../../components/Wrapper/FlexWrapper"
-import { StyledH2 } from "../../../../components/Text/StyledTitle"
-import { StyledP } from "../../../../components/Text/StyledP"
+import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
+import { StyledH2 } from "../../../../components/SectionTitle"
 
 type ProjectCardProps = {
     img: string;
@@ -31,6 +30,10 @@ const StyledArticle = styled.article`
     display: flex;
     flex-direction: column;
     max-width: 330px;
+`
+
+const StyledP = styled.p`
+    
 `
 
 const StyledImg = styled.img`

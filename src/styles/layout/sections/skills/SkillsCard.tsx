@@ -1,6 +1,6 @@
-import { FlexWrapper } from "../../../../components/Wrapper/FlexWrapper"
-import { StyledH2 } from "../../../../components/Text/StyledTitle"
-import { StyledP } from "../../../../components/Text/StyledP"
+import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
+import { StyledH2 } from "../../../../components/SectionTitle"
+import styled from "styled-components";
 
 type SkillsCardProps = {
     group: string;
@@ -15,3 +15,7 @@ export const SkillsCard = (props: SkillsCardProps) => {
         </FlexWrapper>
     )
 }
+
+const StyledP = styled.p`
+    
+`

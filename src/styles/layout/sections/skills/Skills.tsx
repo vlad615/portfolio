@@ -1,5 +1,5 @@
-import { FlexWrapper } from "../../../../components/Wrapper/FlexWrapper"
-import { StyledH2 } from "../../../../components/Text/StyledTitle"
+import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
+import { StyledH2 } from "../../../../components/SectionTitle"
 import { SkillsCard } from "./SkillsCard"
 import { styled } from "styled-components"
 

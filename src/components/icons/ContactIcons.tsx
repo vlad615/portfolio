@@ -1,4 +1,4 @@
-import {FlexWrapper} from "../Wrapper/FlexWrapper";
+import {FlexWrapper} from "../wrapper/FlexWrapper";
 import { Icon } from "./Icon";
 
 type ContactIconsProps = {

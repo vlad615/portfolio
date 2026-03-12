@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import { Logo } from "../../../components/Logo/Logo";
-import { Menu } from "../../../components/Menu/Menu";
-import { FlexWrapper } from "../../../components/Wrapper/FlexWrapper";
+import { Logo } from "../../../components/logo/Logo";
+import { Menu } from "../../../components/menu/Menu";
+import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
 
 export const Header = () =>{
     return(

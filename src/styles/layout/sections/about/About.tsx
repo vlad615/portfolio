@@ -1,6 +1,5 @@
-import { FlexWrapper } from "../../../../components/Wrapper/FlexWrapper"
-import { StyledH2 } from "../../../../components/Text/StyledTitle"
-import { StyledP } from "../../../../components/Text/StyledP"
+import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
+import { StyledH2 } from "../../../../components/SectionTitle"
 import styled from "styled-components"
 import bg from "../../../../accets/Image.svg"
 
@@ -27,6 +26,10 @@ export const About = () =>{
 }
 
 const Section = styled.section`
+`
+
+const StyledP = styled.p`
+    
 `
 
 const StyledImg = styled.img`

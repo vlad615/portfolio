@@ -1,6 +1,6 @@
-import { FlexWrapper } from "../../../../components/Wrapper/FlexWrapper"
+import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
 import { ProjectCard } from "./ProjectCard"
-import { StyledH2 } from "../../../../components/Text/StyledTitle"
+import { StyledH2 } from "../../../../components/SectionTitle"
 import protect from "../../../../accets/projects/Protect.jpg"
 import kahoot from "../../../../accets/projects/Kahoot.jpg"
 import Chert from "../../../../accets/projects/ChertNodes.jpg"
