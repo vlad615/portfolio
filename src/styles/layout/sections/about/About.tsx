@@ -1,5 +1,6 @@
 import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
 import { StyledH2 } from "../../../../components/SectionTitle"
+import { StyledButton } from "../../../../components/Buttons"
 import styled from "styled-components"
 import bg from "../../../../accets/Image.svg"
 
@@ -12,11 +13,11 @@ export const About = () =>{
                     <StyledP>
                         Hello, i’m Elias!
 
-    I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences. 
+    I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.
 
     Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.
                     </StyledP>
-                    <button>Read more</button>
+                    <StyledButton>Read more</StyledButton>
                 </FlexWrapper>
                 <StyledImg src={bg}/>
             </FlexWrapper>

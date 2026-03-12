@@ -11,7 +11,7 @@ export const ContactIcons = (props: ContactIconsProps) =>{
         <FlexWrapper direction={`${props.direction}` || "row"} gap={`${props.gap}` || "10px"}>
             <Icon iconId="tg"/>
             <Icon iconId="git"/>
-            <Icon iconId="vk" width="64px" heigth="64px"/>
+            <Icon iconId="vk" />
         </FlexWrapper>
     )
 }

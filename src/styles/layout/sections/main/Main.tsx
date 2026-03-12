@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
 import { ContactIcons } from "../../../../components/icons/ContactIcons"
+import { StyledH1 } from "../../../../components/SectionTitle"
 import me from "../../../../accets/me.webp"
 import { StyledButton } from "../../../../components/Buttons"
 
@@ -11,7 +12,7 @@ export const Main = () => {
                 <ContactIcons direction="column"/>
 
                 <FlexWrapper direction="column" maxwidth="540px">
-                    <h1>Vlad is a web developer and front-end developer</h1>
+                    <StyledH1>Vlad is a web developer and front-end developer</StyledH1>
                     <p>He crafts responsive websites where technologies meet creativity</p>
                     <StyledButton width="150px">Contact me!!</StyledButton>
                 </FlexWrapper>
@@ -28,6 +29,10 @@ export const Main = () => {
 }
 
 const Section = styled.section`
+`
+
+const StyledP = styled.p`
+    
 `
 
 const Photo = styled.img`

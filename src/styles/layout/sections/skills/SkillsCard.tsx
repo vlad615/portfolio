@@ -1,5 +1,4 @@
-import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
-import { StyledH2 } from "../../../../components/SectionTitle"
+import { StyledTable } from "../../../../components/Table";
 import styled from "styled-components";
 
 type SkillsCardProps = {
@@ -9,10 +8,11 @@ type SkillsCardProps = {
 
 export const SkillsCard = (props: SkillsCardProps) => {
     return(
-        <FlexWrapper direction="column" padding="10px" maxwidth="195px"  border="1px solid #abb2bf">
-            <StyledH2 weigth={600} size="16px">{props.group}</StyledH2>
-            <StyledP>{props.values.join(" ")}</StyledP>
-        </FlexWrapper>
+        <StyledTable maxwidth="calc(100% / 3 - 10px)">
+            <th>{props.group}</th>
+            <tr><StyledP>{props.values.join(" ")}</StyledP></tr>
+            
+        </StyledTable>
     )
 }
 

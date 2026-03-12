@@ -14,7 +14,7 @@ export const Pojects = () => {
                 <StyledH2>#projects</StyledH2>
                 <a>View all ⇝</a>
             </FlexWrapper>
-            <FlexWrapper gap="15px">
+            <FlexWrapper justify="space-between">
                 <ProjectCard img={protect} tools="React Express Node.js HTML SCSS Python FLask" title="ProtectX" description="Discord anti-crash bot"/>
                 <ProjectCard img={kahoot} tools="Express Node.js CSS" title="Kahoot Answers Viewer" description="Get answers to your kahoot quiz"/>
                 <ProjectCard img={Chert} tools=" HTML Python FLask" title="ChertNodes" description="Minecraft servers hosting"/>
