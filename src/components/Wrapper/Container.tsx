@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 
-export const ContainerSection = styled.section`
-    max-width: 1400px;
+export const Container = styled.section`
+    max-width: 1200px;
     margin: 0 auto;
 `
