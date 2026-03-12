@@ -9,8 +9,8 @@ import { About } from './styles/layout/sections/about/About';
 function App() {
     return (<Container>
         <Header />
-        {/* <Main />
-        <Pojects />
+        <Main />
+        {/* <Pojects />
         <Skills />
         <About /> */}
     </Container>
