@@ -12,6 +12,10 @@ export const GlobalStyles = createGlobalStyle`
 
     body{
         font-family: "Fira Code", sans-serif;
+        font-weight: 400;
+        color: #abb2bf;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         min-width: 365px;
         background-color: #282c33;
     }
@@ -22,5 +26,14 @@ export const GlobalStyles = createGlobalStyle`
 
     a{
         text-decoration: none;
+    }
+
+    button, input, select{
+        cursor: pointer;
+    }
+
+    button{
+        background-color: unset;
+        border: none;
     }
 `

@@ -7,11 +7,20 @@ type SkillsCardProps = {
 }
 
 export const SkillsCard = (props: SkillsCardProps) => {
-    return(
+    return (
         <StyledTable maxwidth="calc(100% / 3 - 10px)">
-            <th>{props.group}</th>
-            <tr><StyledP>{props.values.join(" ")}</StyledP></tr>
-            
+            <thead>
+                <tr>
+                    <th>{props.group}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><StyledP>{props.values.join(" ")}</StyledP></td>
+                </tr>
+            </tbody>
+
+
         </StyledTable>
     )
 }

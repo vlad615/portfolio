@@ -14,16 +14,26 @@ type ProjectCardProps = {
 export const ProjectCard = (props: ProjectCardProps) => {
     return(
     <StyledTable>
-        <StyledImg src={props.img}/>
-        <StyledP>{props.tools}</StyledP>
-        <tr>
-            <StyledH2 size="25px">{props.title}</StyledH2>
-            <StyledP>{props.description}</StyledP>
-            <FlexWrapper gap="5px">
-                <StyledButton >Live ↭</StyledButton>
-                <StyledButton dark>Cached ≥</StyledButton>
-            </FlexWrapper>
-        </tr>
+        <tbody>
+            <tr>
+                <td>
+                    <StyledImg src={props.img}/>     
+                    <StyledP>{props.tools}</StyledP>   
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <StyledH2 size="25px">{props.title}</StyledH2>
+                    <StyledP>{props.description}</StyledP>
+                    <FlexWrapper gap="5px">
+                        <StyledButton>Live ↭</StyledButton>
+                        <StyledButton dark>Cached ≥</StyledButton>
+                    </FlexWrapper>
+                </td>
+            </tr>
+        </tbody>
+
     </StyledTable>
     )
     
