@@ -13,8 +13,8 @@ export const Contacts = () => {
                 </Text>
                 <MessageMe>
                     <StyledH3>Massege me here</StyledH3>
-                    <StyledP><Icon iconId="tg"/> @VladislavElmirovich</StyledP>
-                    <StyledP><Icon iconId="email"/> ambrosov413@gmail.com</StyledP>
+                    <StyledP><a href=""><Icon iconId="tg"/></a> @VladislavElmirovich</StyledP>
+                    <StyledP><a href=""><Icon iconId="email" viewbox="0,0,20,20"/></a> ambrosov413@gmail.com</StyledP>
                 </MessageMe>
             </FlexWrapper>
             
