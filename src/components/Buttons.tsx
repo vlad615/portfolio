@@ -14,7 +14,7 @@ export const StyledButton = styled.button<ButtonsProps>`
     padding: 8px 16px;
     background-color: transparent;
     max-width: ${props => props.width};
-    transition: background-color 0.3s linear;
+    transition: background-color 0.2s linear;
 
     &:hover{
         background: rgba(199, 120, 221, 0.2);

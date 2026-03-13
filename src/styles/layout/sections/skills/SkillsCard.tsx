@@ -8,10 +8,10 @@ type SkillsCardProps = {
 
 export const SkillsCard = (props: SkillsCardProps) => {
     return (
-        <StyledTable maxwidth="calc(100% / 3 - 10px)">
+        <StyledTable maxwidth="calc(100% / 3 - 15px)">
             <thead>
                 <tr>
-                    <th>{props.group}</th>
+                    <StyledTH>{props.group}</StyledTH>
                 </tr>
             </thead>
             <tbody>
@@ -25,6 +25,15 @@ export const SkillsCard = (props: SkillsCardProps) => {
     )
 }
 
+const StyledTH = styled.th`
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px;
+    text-align: start;
+`
+
 const StyledP = styled.p`
-    
+    line-height: 1.8em;
+    padding: 8px;
 `

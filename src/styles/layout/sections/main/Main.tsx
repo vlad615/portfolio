@@ -2,9 +2,9 @@ import styled from "styled-components"
 import { theme } from "../../../Themes"
 import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
 import { ContactIcons } from "../../../../components/icons/ContactIcons"
-import { StyledH1 } from "../../../../components/SectionTitle"
+import { StyledH1 } from "../../../../components/SectionElements"
 import vertical from "../../../../accets/elements/vertical.svg"
-import frame from "../../../../accets/elements/frame.svg"
+import frame from "../../../../accets/frame.svg"
 import me from "../../../../accets/me.webp"
 import { StyledButton } from "../../../../components/Buttons"
 
@@ -40,8 +40,9 @@ const Section = styled.section`
     margin: 30px 0 75px;
     position: relative;
     &::before{
-        content: "";
-        background-image: url(vertical);
+        content: url(${vertical});
+        display: inline-block;
+        position: absolute;
         left: -100px;
     }
 `
@@ -51,7 +52,7 @@ const ContactWrapper = styled.div`
     left: -100px;     
 `
 const StyledSpan = styled.span`
-    background-image: ${theme.color.accent};
+    background-image: linear-gradient(90deg, ${theme.color.accent} 55%, ${theme.color.secondAccent} 100%);
     -webkit-background-clip: text; 
     background-clip: text;         
     color: transparent;
@@ -66,9 +67,10 @@ const ImgWrapper = styled.div`
     max-height: 300px;
     margin-bottom: 110px;
     
-    &::after{
-        background-image: url({frame});
-        background-size: 200%;
+    &::before{
+        content: url();
+        position: absolute;
+        right:100px;
     }
 `
 
@@ -77,7 +79,7 @@ const Photo = styled.img`
     object-fit: cover;
     border: solid 5px transparent;
     border-radius: 50%;
-    background: ${theme.color.imgBorder} border-box; 
+    background: linear-gradient(to bottom, ${theme.color.accent}, ${theme.color.secondAccent}) border-box; 
 `
 
 const QuotWrapper = styled.div`

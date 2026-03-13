@@ -20,15 +20,7 @@ const StyledMenu = styled.nav`
         display: flex;
         gap: 30px;
         font-weight: 400;
-        font-size: 16px;
-
-        li span{
-            background-image: ${theme.color.accent};
-            -webkit-background-clip: text; 
-            background-clip: text;         
-            color: transparent;
-        }
-        
+        font-size: 16px;        
     }
 `
 
@@ -38,10 +30,9 @@ const StyledA = styled.a`
 
     &::before {
         content: "#";
-        background-image: ${theme.color.accent};
         -webkit-background-clip: text; 
         background-clip: text;         
-        color: transparent;
+        color: ${theme.color.accent};
         transition: color 0.2s linear;
     }
     
