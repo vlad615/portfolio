@@ -3,8 +3,8 @@ import { theme } from "../../../Themes"
 import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
 import { ContactIcons } from "../../../../components/icons/ContactIcons"
 import { StyledH1 } from "../../../../components/SectionElements"
-import vertical from "../../../../accets/elements/vertical.svg"
-import frame from "../../../../accets/frame.svg"
+import frame from "../../../../accets/elements/frame.svg"
+import coma from "../../../../accets/elements/coma.svg"
 import me from "../../../../accets/me.webp"
 import { StyledButton } from "../../../../components/Buttons"
 
@@ -40,10 +40,13 @@ const Section = styled.section`
     margin: 30px 0 75px;
     position: relative;
     &::before{
-        content: url(${vertical});
-        display: inline-block;
+        content: "";
         position: absolute;
-        left: -100px;
+        background-color: ${theme.color.font};
+        width: 1px;
+        height: 120px;
+        top: -133px;
+        left: -83px;
     }
 `
 
@@ -63,14 +66,18 @@ const StyledP = styled.p`
 `
 
 const ImgWrapper = styled.div`
+    position: relative;
     max-width: 300px;
     max-height: 300px;
     margin-bottom: 110px;
-    
+
     &::before{
-        content: url();
+        content: "";
+        background-image: url({frame});
         position: absolute;
-        right:100px;
+        width: 400px;
+        height: 400px;
+        /* right:100px; */
     }
 `
 
@@ -87,10 +94,20 @@ const QuotWrapper = styled.div`
     flex-direction: column;
     align-items: flex-end;
     justify-self: center;
+    position: relative;
+
+    &::before{
+        content: "";
+        display: inline-block;
+        background-image: url(${`${coma}`});
+        width: 60px;
+        height: 60px;
+        position: absolute;
+
+    }
 `
 
 const StyledQ = styled.q`
-    position: relative;
     font-weight: 500;
     font-size: 24px;
     color: #fff;
@@ -105,4 +122,11 @@ const StyledQ = styled.q`
         border: 1px solid #abb2bf;
     }
 
+    &::before{
+        content: "";
+    }
+
+    &::after{
+        content: "";
+    }
 `
