@@ -30,14 +30,12 @@ const StyledA = styled.a`
 
     &::before {
         content: "#";
-        -webkit-background-clip: text; 
-        background-clip: text;         
         color: ${theme.color.accent};
         transition: color 0.2s linear;
     }
     
     &:hover{
-        color: ${theme.color.hoverText};;
+        color: ${theme.color.hoverFont};;
     }
 
     &:hover::before {

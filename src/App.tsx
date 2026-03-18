@@ -1,5 +1,4 @@
 import { Header } from './styles/layout/header/Header';
-import { Container } from './components/wrapper/Container';
 import { Main } from './styles/layout/sections/main/Main';
 import { Pojects } from './styles/layout/sections/projects/Projects';
 import { Skills } from './styles/layout/sections/skills/Skills';
@@ -14,17 +13,17 @@ I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop re
 
 Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.`
     
-return (
-    <Container>
-        <Header />
-        <Main />
-        <Pojects />
-        <Skills />
-        <About text={textAbout}/>
-        <Contacts />
-        <Footer />
-    </Container>
-    );
+return (<>
+    <Header />
+    <Main />
+    {/* <Pojects />
+    <Skills />
+    <About text={textAbout}/>
+    <Contacts />
+    <Footer /> */}
+</>
+    
+);
 }
 
 export default App;

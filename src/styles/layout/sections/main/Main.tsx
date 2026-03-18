@@ -1,9 +1,11 @@
 import styled from "styled-components"
 import { theme } from "../../../Themes"
 import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
+import { Container } from "../../../../components/wrapper/Container"
 import { ContactIcons } from "../../../../components/icons/ContactIcons"
-import { StyledH1 } from "../../../../components/SectionElements"
-import frame from "../../../../accets/elements/frame.svg"
+import { H1 } from "../../../../components/title/H1"
+import { Icon } from "../../../../components/icons/Icon"
+import frame from "./../../../../accets/elements/Abstract.png"
 import coma from "../../../../accets/elements/coma.svg"
 import me from "../../../../accets/me.webp"
 import { StyledButton } from "../../../../components/Buttons"
@@ -11,26 +13,28 @@ import { StyledButton } from "../../../../components/Buttons"
 export const Main = () => {
     return (
         <Section>
-            <FlexWrapper justify="space-between">
-                <ContactWrapper><ContactIcons direction="column" /></ContactWrapper>
-                <FlexWrapper direction="column" maxwidth="540px" align="flex-start">
-                    <StyledH1>Vlad is a
-                        <StyledSpan> web developer</StyledSpan> and
-                        <StyledSpan> front-end developer</StyledSpan>
-                    </StyledH1>
-                    <StyledP>He crafts responsive websites where technologies meet creativity</StyledP>
-                    <StyledButton width="150px">Contact me!!</StyledButton>
+            <ContactWrapper><ContactIcons direction="column" /></ContactWrapper> 
+            <Container>
+                <FlexWrapper $justify="space-between" $align="flex-end">
+                    <TextWrapper>
+                        <H1>Vlad is a
+                            <StyledSpan> web developer</StyledSpan> and
+                            <StyledSpan> front-end developer</StyledSpan>
+                        </H1>
+                        <StyledP>He crafts responsive websites where technologies meet creativity</StyledP>
+                        <StyledButton as="a" width="150px">Contact me!!</StyledButton>
+                    </TextWrapper>
+                    <ImgWrapper>
+                        <Photo src={me} alt="Web Developer" />
+                        <Frame src={frame} alt="" />
+                    </ImgWrapper>
                 </FlexWrapper>
-                <ImgWrapper>
-                    <Photo src={me} alt="Web Developer" />
-                </ImgWrapper>
-
-            </FlexWrapper>
-
-            <QuotWrapper>
-                <StyledQ>With great power comes great electricity bill</StyledQ>
-                <span>- Dr. Who</span>
-            </QuotWrapper>
+                
+                <QuotWrapper>
+                    <StyledQ>With great power comes great electricity bill</StyledQ>
+                    <cite>- Dr. Who</cite>
+                </QuotWrapper>
+            </Container>
         </Section>
 
     )
@@ -38,22 +42,27 @@ export const Main = () => {
 
 const Section = styled.section`
     margin: 30px 0 75px;
-    position: relative;
+`
+
+const ContactWrapper = styled.div`
+    position: fixed;
+    left: 50%;
+    transform: translateX(-580px);
+
     &::before{
         content: "";
         position: absolute;
         background-color: ${theme.color.font};
         width: 1px;
         height: 120px;
-        top: -133px;
-        left: -83px;
-    }
+        top: -135px;
+        right: 40%;
+}
+`
+const TextWrapper = styled.div`
+    max-width: 540px;
 `
 
-const ContactWrapper = styled.div`
-    position: absolute;
-    left: -100px;     
-`
 const StyledSpan = styled.span`
     background-image: linear-gradient(90deg, ${theme.color.accent} 55%, ${theme.color.secondAccent} 100%);
     -webkit-background-clip: text; 
@@ -69,20 +78,25 @@ const ImgWrapper = styled.div`
     position: relative;
     max-width: 300px;
     max-height: 300px;
-    margin-bottom: 110px;
-
-    &::before{
+    /* &::before{
         content: "";
-        background-image: url({frame});
+        background-image: url(${frame});
+        display: inline-block;
         position: absolute;
-        width: 400px;
-        height: 400px;
-        /* right:100px; */
-    }
+        width: 300px;
+        height: 300px;  
+    } */
+`
+
+const Frame = styled.img`
+    position: absolute;
+    width: 110%;
+    top: -60px;
+    right: 30px;
 `
 
 const Photo = styled.img`
-    width: 100%;
+    width: 70%;
     object-fit: cover;
     border: solid 5px transparent;
     border-radius: 50%;
@@ -90,6 +104,7 @@ const Photo = styled.img`
 `
 
 const QuotWrapper = styled.div`
+    margin-top: 110px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -114,7 +129,7 @@ const StyledQ = styled.q`
     padding: 30px;
     border: 1px solid #abb2bf;
 
-    & + span{
+    & + cite{
         font-weight: 400;
         font-size: 24px;
         color: #fff;

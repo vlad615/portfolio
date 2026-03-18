@@ -29,7 +29,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
                             <StyledP>{props.description}</StyledP>
                             <FlexWrapper gap="5px">
                                 <StyledButton>Live ↭</StyledButton>
-                                <StyledButton dark>Cached ≥</StyledButton>
+                                <StyledButton $dark>Cached ≥</StyledButton>
                             </FlexWrapper>
                         </Wrapper>
                     </td>

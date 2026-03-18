@@ -7,6 +7,6 @@ export const theme = {
         secondAccent: "#00C0FD",
 
         font: "#abb2bf",
-        hoverText: "#fff",
+        hoverFont: "#fff",
     }
 }

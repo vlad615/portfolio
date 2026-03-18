@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 type ButtonsProps = {
     width?: string;
-    dark?: boolean;
+    $dark?: boolean | null;
 }
 
 export const StyledButton = styled.button<ButtonsProps>`
@@ -20,7 +20,7 @@ export const StyledButton = styled.button<ButtonsProps>`
         background: rgba(199, 120, 221, 0.2);
     }
 
-    ${props=>props.dark && css<ButtonsProps>`
+    ${props=>props.$dark && css<ButtonsProps>`
         border-color: #abb2bf;
         color: #abb2bf;
 
