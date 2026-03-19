@@ -5,6 +5,8 @@ type StyledTitleProps = {
     weigth?: number;
     size?: string;
     color?: string;
+    before?: string;
+    afterWidth?: string;
 }
 
 
@@ -15,9 +17,7 @@ export const SectionTitle = styled.h2<StyledTitleProps>`
     color: ${props => props.color || "#fff"};
 
     &::before {
-        content: "#";
-        -webkit-background-clip: text; 
-        background-clip: text;         
+        content: '${props => props.before || "#"}';
         color: ${theme.color.accent};
         transition: color 0.2s linear;
     }
@@ -26,7 +26,7 @@ export const SectionTitle = styled.h2<StyledTitleProps>`
         content: "";
         position: absolute;
         height: 1px;
-        width: 510px;
+        width: ${props => props.afterWidth || "130px"};
         background-color: ${theme.color.accent};
         transform: translateX(15px);
         top: 50%;

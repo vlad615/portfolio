@@ -4,9 +4,7 @@ import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
 import { Container } from "../../../../components/wrapper/Container"
 import { ContactIcons } from "../../../../components/icons/ContactIcons"
 import { H1 } from "../../../../components/title/H1"
-import { Icon } from "../../../../components/icons/Icon"
 import frame from "./../../../../accets/elements/Abstract.png"
-import coma from "../../../../accets/elements/coma.svg"
 import me from "../../../../accets/me.webp"
 import { StyledButton } from "../../../../components/Buttons"
 
@@ -36,13 +34,8 @@ export const Main = () => {
                 </QuotWrapper>
             </Container>
         </Section>
-
-    )
+)
 }
-
-const Section = styled.section`
-    margin: 30px 0 75px;
-`
 
 const ContactWrapper = styled.div`
     position: fixed;
@@ -59,6 +52,25 @@ const ContactWrapper = styled.div`
         right: 40%;
 }
 `
+
+const Section = styled.section`
+    margin: 30px 0 75px;
+    position: relative;
+    overflow: hidden;
+
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        border: 1px solid ${theme.color.font};
+        right: 50%;
+        bottom: 10%;
+        transform: translateX(850px);
+    }
+`
+
 const TextWrapper = styled.div`
     max-width: 540px;
 `
@@ -90,7 +102,7 @@ const ImgWrapper = styled.div`
 
 const Frame = styled.img`
     position: absolute;
-    width: 110%;
+    max-width: 110%;
     top: -60px;
     right: 30px;
 `
@@ -109,39 +121,45 @@ const QuotWrapper = styled.div`
     flex-direction: column;
     align-items: flex-end;
     justify-self: center;
-    position: relative;
-
-    &::before{
-        content: "";
-        display: inline-block;
-        background-image: url(${`${coma}`});
-        width: 60px;
-        height: 60px;
-        position: absolute;
-
-    }
 `
 
 const StyledQ = styled.q`
+    position: relative;
     font-weight: 500;
     font-size: 24px;
     color: #fff;
     padding: 30px;
-    border: 1px solid #abb2bf;
+    border: 1px solid ${theme.color.font};
 
     & + cite{
-        font-weight: 400;
+        font-style: normal;
         font-size: 24px;
         color: #fff;
         padding: 15px;
-        border: 1px solid #abb2bf;
+        border: 1px solid ${theme.color.font};
     }
 
     &::before{
-        content: "";
+        content: open-quote;
+        color: ${theme.color.font};
+        background-color: ${theme.color.primaryBg};
+        height: 30px;
+        font-size: 2.5em;
+        position: absolute;
+        top: -25px;
     }
 
     &::after{
-        content: "";
+        content: close-quote;
+        position: absolute;
+        display: inline-block;
+        transform: rotate(180deg);
+        color: ${theme.color.font};
+        background-color: ${theme.color.primaryBg};
+        height: 30px;
+        font-size: 2.5em;
+        position: absolute;
+        bottom: -18px;
+        right: 20px
     }
 `

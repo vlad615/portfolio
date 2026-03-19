@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./Themes"
+
 
 
 export const GlobalStyles = createGlobalStyle`
@@ -13,11 +15,11 @@ export const GlobalStyles = createGlobalStyle`
     body{
         font-family: "Fira Code", sans-serif;
         font-weight: 400;
-        color: #abb2bf;
+        color: ${theme.color.font};
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         min-width: 365px;
-        background-color: #282c33;
+        background-color: ${theme.color.primaryBg};
     }
 
     ul, ol{
@@ -28,7 +30,7 @@ export const GlobalStyles = createGlobalStyle`
         text-decoration: none;
     }
 
-    button, input, select{
+    button, input, select, a{
         cursor: pointer;
     }
 

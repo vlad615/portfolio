@@ -1,30 +1,53 @@
 import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
-import { StyledH2 } from "../../../../components/SectionElements"
+import { SectionTitle } from "../../../../components/title/SectionTitle"
 import { SkillsCard } from "./SkillsCard"
 import { styled } from "styled-components"
+import { Container } from "../../../../components/wrapper/Container"
+import { theme } from "../../../Themes"
 
 export const Skills = () => {
     return(
     <Section>
-        <StyledH2>skills</StyledH2>
-        <FlexWrapper maxwidth="600px" wrap="wrap" gap="15px" justify="flex-end" align="flex-start">
-            <SkillsCard group="Languages" values={["TypeScript", "JavaScript", "Python"]}/>
-            <SkillsCard group="Databases" values={["PostgreSQL", "SQLite", "SQL"]}/>
-            <SkillsCard group="Tools" values={["VSCode", "Linux", "Git", "Figma", "GitLab CI/CD"]}/>
-            <SkillsCard group="Other" values={["HTML", "CSS", "Rest", "Jinja", "SCSS"]}/>
-            <SkillsCard group="Frameworks" values={["React", "FastAPI", "Django"]}/>
-        </FlexWrapper>
+        <Container>
+            <SectionTitle afterWidth="240px">skills</SectionTitle>
+            <FlexWrapper $justify="space-between" >
+                <ImageWrapper></ImageWrapper>
+                <SkillsWrapper>
+                    <SkillsCard group="Tools" values={["VSCode", "Linux", "Git", "Figma", "GitLab CI/CD"]}/>
+                    <SkillsCard group="Languages" values={["TypeScript", "JavaScript", "Python"]}/>
+                    <SkillsCard group="Databases" values={["PostgreSQL", "SQLite", "SQL"]}/>
+                    <SkillsCard group="Other" values={["HTML", "CSS", "Rest", "Jinja", "SCSS"]}/>
+                    <SkillsCard group="Frameworks" values={["React", "FastAPI", "Django"]}/>
+                </SkillsWrapper>
+            </FlexWrapper>
+        </Container>
     </Section>
     )
 }
 
 const Section = styled.section`
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    
     margin-bottom: 100px;
-    div{
-        align-self: flex-end;
+
+    &::before{
+        content: "";
+        position: absolute;
+        border: solid 1px ${theme.color.font};
+        width: 85px;
+        height: 85px;
+        left: 50%;
     }
+`
+
+const ImageWrapper = styled.div`
+    /* width: 350px; */
+`
+
+const SkillsWrapper = styled.div`
+    display: flex;
+    max-width: 600px;
+    gap: 15px;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 40px;
 `

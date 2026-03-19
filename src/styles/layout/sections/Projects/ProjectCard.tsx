@@ -1,51 +1,53 @@
 import { styled } from "styled-components"
 import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
 import { StyledButton } from "../../../../components/Buttons"
-import { StyledTable } from "../../../../components/Table"
+import { theme } from "../../../Themes";
 
 type ProjectCardProps = {
     img: string;
-    tools: string;
+    tools: Array<string>;
     title: string;
     description: string;
 }
 
 export const ProjectCard = (props: ProjectCardProps) => {
     return (
-        <StyledTable>
-            <thead>
-                <tr>
-                    <td>
-                        <StyledImg src={props.img} />
-                        <StyledP>{props.tools}</StyledP>
-                    </td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <Wrapper>
-                            <Title>{props.title}</Title>
-                            <StyledP>{props.description}</StyledP>
-                            <FlexWrapper gap="5px">
-                                <StyledButton>Live ↭</StyledButton>
-                                <StyledButton $dark>Cached ≥</StyledButton>
-                            </FlexWrapper>
-                        </Wrapper>
-                    </td>
-                </tr>
-            </tbody>
-        </StyledTable>
+    <CardWrapper>
+        <StyledImg src={props.img} />
+        <StyledUl>{props.tools.map(x => <li>{x}</li>)}</StyledUl>
+        <Wrapper>
+            <Title>{props.title}</Title>
+            <StyledP>{props.description}</StyledP>
+            <FlexWrapper $gap="5px">
+                <StyledButton as="a">Live ↭</StyledButton>
+                <StyledButton as="a" $dark>Cached ≥</StyledButton>
+            </FlexWrapper>
+        </Wrapper>
+    </CardWrapper>
+
+                        
     )
 
 }
 
-const StyledImg = styled.img`
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+const CardWrapper = styled.div`
+    max-width: 330px;
+    border: solid 1px ${theme.color.font};
 `
 
+const StyledImg = styled.img`
+    width: 100%;
+    object-fit: cover;
+`
+const StyledUl = styled.ul`
+    padding: 0 5px 5px 5px;
+    border-bottom: solid 1px ${theme.color.font};
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        margin-right: 10px;
+    }
+`
 
 const StyledP = styled.p`
     padding: 0 5px 5px 5px;

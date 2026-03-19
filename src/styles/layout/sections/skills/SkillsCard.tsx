@@ -1,5 +1,5 @@
-import { StyledTable } from "../../../../components/Table";
 import styled from "styled-components";
+import { theme } from "../../../Themes";
 
 type SkillsCardProps = {
     group: string;
@@ -8,32 +8,26 @@ type SkillsCardProps = {
 
 export const SkillsCard = (props: SkillsCardProps) => {
     return (
-        <StyledTable maxwidth="calc(100% / 3 - 15px)">
-            <thead>
-                <tr>
-                    <StyledTH>{props.group}</StyledTH>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><StyledP>{props.values.join(" ")}</StyledP></td>
-                </tr>
-            </tbody>
+    <SkillWrapper>
+        <StyledH3>{props.group}</StyledH3>
+        <StyledP>{props.values.join(" ")}</StyledP>
+    </SkillWrapper>
+)}
 
+const SkillWrapper = styled.div`
+    max-width: calc(600px / 3 - 15px);
+    border: solid 1px ${theme.color.font};
+`
 
-        </StyledTable>
-    )
-}
-
-const StyledTH = styled.th`
+const StyledH3 = styled.h3`
     font-weight: 600;
     font-size: 16px;
     color: #fff;
-    padding: 8px;
-    text-align: start;
+    padding: 10px;
+    border-bottom: solid 1px ${theme.color.font};
 `
 
 const StyledP = styled.p`
     line-height: 1.8em;
-    padding: 8px;
+    padding: 5px;
 `
