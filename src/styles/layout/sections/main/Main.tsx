@@ -4,7 +4,7 @@ import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
 import { Container } from "../../../../components/wrapper/Container"
 import { ContactIcons } from "../../../../components/icons/ContactIcons"
 import { H1 } from "../../../../components/title/H1"
-import frame from "./../../../../accets/elements/Abstract.png"
+import frame from "./../../../../accets/Abstract.png"
 import me from "../../../../accets/me.webp"
 import { StyledButton } from "../../../../components/Buttons"
 

@@ -18,9 +18,9 @@ return (<>
     <Main />
     <Pojects />
     <Skills />
-    {/* <About text={textAbout}/>
+    <About text={textAbout}/>
     <Contacts />
-    <Footer /> */}
+    {/* <Footer /> */}
 </>
     
 );
