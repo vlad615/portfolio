@@ -4,15 +4,18 @@ import { Icon } from "./Icon";
 type ContactIconsProps = {
     direction?: string;
     $gap?: string;
+    width?: string;
+    height?: string;
+    viewbox?: string;
 }
 
 
 export const ContactIcons = (props: ContactIconsProps) =>{
     return(
         <StyledUl direction={props.direction}>
-            <li><a href=""><Icon iconId="tg" viewbox="1, 0, 23, 23"/></a></li>
-            <li><a href=""><Icon iconId="git" viewbox="-2, -2, 24, 24"/></a></li>
-            <li><a href=""><Icon iconId="vk" viewbox="-1.5, -1, 23, 23"/></a></li>
+            <li><a href=""><Icon iconId="tg"  width={props.width || "32"} height={props.height || "32"} viewbox={props.viewbox || "1, 0, 23, 23"}/></a></li>
+            <li><a href=""><Icon iconId="git" width={props.width || "32"} height={props.height || "32"} viewbox={props.viewbox || "-2, -2, 24, 24"}/></a></li>
+            <li><a href=""><Icon iconId="vk" width={props.width || "32"} height={props.height || "32"} viewbox={props.viewbox || "-1.5, -1, 23, 23"}/></a></li>
         </StyledUl>
     )
 }

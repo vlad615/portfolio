@@ -3,13 +3,13 @@ import SvgSprite from '../../accets/svg-sprite.svg';
 type IconsProps = {
     iconId: string;
     width?: string;
-    heigth?: string;
+    height?: string;
     viewbox?: string;
 }
 
 export const Icon = (props: IconsProps) =>{
     return(
-        <svg xmlns="http://www.w3.org/2000/svg" width={props.width || "32"} height={props.heigth || "32"} viewBox={props.viewbox || '0,0,24,24'}>
+        <svg xmlns="http://www.w3.org/2000/svg" width={props.width || "32"} height={props.height || "32"} viewBox={props.viewbox || '0,0,24,24'}>
             <use xlinkHref={`${SvgSprite}#${props.iconId}`} />
         </svg>
     )

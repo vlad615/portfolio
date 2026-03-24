@@ -1,5 +1,5 @@
 import { styled } from "styled-components"
-import { theme } from "../../styles/Themes"
+import { theme } from "../../../Themes"
 
 
 export const Menu = () =>{
@@ -11,16 +11,29 @@ export const Menu = () =>{
                 <li><StyledA href="">about-me</StyledA></li>
                 <li><StyledA href="">contacts</StyledA></li>
             </ul>
+            <SytledSelect id="language">
+                <option value="english">EN</option>
+                <option value="russian">RU</option>
+                <option value="ukrainian">UA</option>
+                <option value="belarusian">BE</option>
+            </SytledSelect>
         </StyledMenu>
     )
 }
 
 const StyledMenu = styled.nav`
+    display: flex;
+    gap: 30px;
+
     ul{
         display: flex;
         gap: 30px;
         font-weight: 400;
         font-size: 16px;        
+    }
+
+    @media ${theme.media.tablet}{
+        display: none;
     }
 `
 
@@ -41,6 +54,16 @@ const StyledA = styled.a`
     &:hover::before {
         filter: brightness(130%)
     }
+`
 
+const SytledSelect = styled.select`
+    font-weight: 600;
+    font-size: 16px;
+    color: ${theme.color.font};
+    background-color: ${theme.color.primaryBg};
+    border: none;
 
+    &:hover{
+        color: ${theme.color.hoverFont};
+    }
 `
