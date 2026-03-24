@@ -13,7 +13,7 @@ export const Main = () => {
         <Section>
             <ContactWrapper><ContactIcons direction="column" /></ContactWrapper> 
             <Container>
-                <FlexWrapper $justify="space-between" $align="flex-end">
+                <Wrapper>
                     <TextWrapper>
                         <H1>Vlad is a
                             <StyledSpan> web developer</StyledSpan> and
@@ -26,7 +26,7 @@ export const Main = () => {
                         <Photo src={me} alt="Web Developer" />
                         <Frame src={frame} alt="" />
                     </ImgWrapper>
-                </FlexWrapper>
+                </Wrapper>
                 
                 <QuotWrapper>
                     <StyledQ>With great power comes great electricity bill</StyledQ>
@@ -36,6 +36,7 @@ export const Main = () => {
         </Section>
 )
 }
+
 
 const ContactWrapper = styled.div`
     position: fixed;
@@ -49,9 +50,26 @@ const ContactWrapper = styled.div`
         width: 1px;
         height: 120px;
         top: -135px;
-        right: 50%;
-}
+        right: 50%;}
+    
+    @media screen and (max-width: 1180px){
+        display: none;
+    }
 `
+
+const Wrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+
+    @media ${theme.media.large}{
+        flex-direction: column;
+        align-items: center;
+
+        ${StyledButton}{
+            display: none;
+        }
+    }
+` 
 
 const Section = styled.section`
     margin: 30px 0 75px;
@@ -101,6 +119,7 @@ const ImgWrapper = styled.div`
 `
 
 const Frame = styled.img`
+    margin-top: 25px;
     position: absolute;
     max-width: 110%;
     top: -60px;
@@ -108,6 +127,7 @@ const Frame = styled.img`
 `
 
 const Photo = styled.img`
+    margin-top: 25px;
     width: 70%;
     object-fit: cover;
     border: solid 5px transparent;
