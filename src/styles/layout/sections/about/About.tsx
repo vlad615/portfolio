@@ -4,6 +4,7 @@ import { StyledButton } from "../../../../components/Buttons"
 import styled from "styled-components"
 import bg from "../../../../accets/Image.svg"
 import { Container } from "../../../../components/wrapper/Container"
+import { theme } from "../../../Themes"
 
 type AboutProps = {
     text: string;

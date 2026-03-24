@@ -16,12 +16,15 @@ export const Contacts = () => {
                     </StyledP>
                     <MessageMe>
                         <StyledH3>Massege me here</StyledH3>
-                        <a href=""><Icon iconId="tg" viewbox="0,-1,23,23"/> @VladislavElmirovich</a>
-                        <a href=""><Icon iconId="email" viewbox="0,-2,20,20"/> ambrosov413@gmail.com</a>
+                        <FlexWrapper $justify="center" $align="center" $gap="5px">
+                            <Icon iconId="tg" viewbox="2,1,23,23"/><a href="">@VladislavElmirovich</a>
+                        </FlexWrapper>
+                        <FlexWrapper $justify="center" $align="center" $gap="5px">
+                            <Icon iconId="email" viewbox="0,0,20,20"/><a href="mailto:ambrosov413@gmail.com">ambrosov413@gmail.com</a>
+                        </FlexWrapper>
                     </MessageMe>
                 </FlexWrapper>
             </Container>
-            
         </Section>
     )
 }

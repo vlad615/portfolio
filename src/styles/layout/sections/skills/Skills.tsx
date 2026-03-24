@@ -17,7 +17,7 @@ export const Skills = () => {
                     <img src={dots} alt="" /> */}
                 </ImageWrapper>
                 <SkillsWrapper>
-                    <SkillsCard group="Tools" values={["VSCode", "Linux", "Git", "Figma", "GitLab CI/CD"]}/>
+                    <SkillsCard group="Tools" values={["VSCode", "Linux", "Git", "Figma", "VSCode", "Linux", "Git", "GitLab CI/CD"]}/>
                     <SkillsCard group="Languages" values={["TypeScript", "JavaScript", "Python"]}/>
                     <SkillsCard group="Databases" values={["PostgreSQL", "SQLite", "SQL"]}/>
                     <SkillsCard group="Other" values={["HTML", "CSS", "Rest", "Jinja", "SCSS"]}/>

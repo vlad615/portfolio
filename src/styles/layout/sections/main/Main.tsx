@@ -49,7 +49,7 @@ const ContactWrapper = styled.div`
         width: 1px;
         height: 120px;
         top: -135px;
-        right: 40%;
+        right: 50%;
 }
 `
 
