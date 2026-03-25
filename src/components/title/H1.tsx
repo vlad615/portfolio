@@ -12,4 +12,5 @@ export const H1 = styled.h1<StyledTitleProps>`
     font-size: ${props => props.size || "32px"};
     color: ${props => props.color || "#fff"};
     border: ${props => props.border || "none"};
+    white-space:  collapse;
 `

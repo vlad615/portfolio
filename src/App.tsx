@@ -16,11 +16,11 @@ Transforming my creativity and knowledge into a websites has been my passion for
 return (<>
     <Header />
     <Main />
-    <Pojects />
+    {/* <Pojects />
     <Skills />
     <About text={textAbout}/>
     <Contacts />
-    <Footer />
+    <Footer /> */}
 </>
     
 );

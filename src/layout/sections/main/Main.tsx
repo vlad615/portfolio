@@ -1,12 +1,12 @@
 import styled from "styled-components"
 import { theme } from "../../../styles/Themes"
-import { FlexWrapper } from "../../../components/wrapper/FlexWrapper"
 import { Container } from "../../../components/wrapper/Container"
 import { ContactIcons } from "../../../components/icons/ContactIcons"
 import { H1 } from "../../../components/title/H1"
 import frame from "./../../../accets/Abstract.png"
 import me from "../../../accets/me.webp"
 import { StyledButton } from "../../../components/Buttons"
+import { font } from "../../../styles/Commun"
 
 export const Main = () => {
     return (
@@ -37,6 +37,23 @@ export const Main = () => {
 )
 }
 
+const Section = styled.section`
+    margin: 30px 0 75px;
+    position: relative;
+    overflow: hidden;
+
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        border: 1px solid ${theme.color.font};
+        right: 50%;
+        bottom: 10%;
+        transform: translateX(850px);
+    }
+`
 
 const ContactWrapper = styled.div`
     position: fixed;
@@ -59,35 +76,17 @@ const ContactWrapper = styled.div`
 
 const Wrapper = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 
-    @media ${theme.media.large}{
-        flex-direction: column;
-        align-items: center;
+    @media ${theme.media.tablet}{
+        flex-wrap: wrap;
 
         ${StyledButton}{
             display: none;
         }
     }
 ` 
-
-const Section = styled.section`
-    margin: 30px 0 75px;
-    position: relative;
-    overflow: hidden;
-
-
-    &::after{
-        content: "";
-        position: absolute;
-        width: 90px;
-        height: 90px;
-        border: 1px solid ${theme.color.font};
-        right: 50%;
-        bottom: 10%;
-        transform: translateX(850px);
-    }
-`
 
 const TextWrapper = styled.div`
     max-width: 540px;
@@ -102,28 +101,24 @@ const StyledSpan = styled.span`
 
 const StyledP = styled.p`
     margin: 30px 0 25px;
+    @media ${theme.media.tablet}{
+        margin: 25px 0;
+    }    
 `
 
 const ImgWrapper = styled.div`
     position: relative;
     max-width: 300px;
     max-height: 300px;
-    /* &::before{
-        content: "";
-        background-image: url(${frame});
-        display: inline-block;
-        position: absolute;
-        width: 300px;
-        height: 300px;  
-    } */
+    display: flex;
+    justify-content: center;
 `
 
 const Frame = styled.img`
-    margin-top: 25px;
     position: absolute;
     max-width: 110%;
-    top: -60px;
-    right: 30px;
+    top: -35px;
+    right: -15px;
 `
 
 const Photo = styled.img`
@@ -140,21 +135,20 @@ const QuotWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-self: center;
+    justify-self: center;    
 `
 
 const StyledQ = styled.q`
     position: relative;
-    font-weight: 500;
-    font-size: 24px;
-    color: #fff;
+
+    ${font({color: "#fff", weight: 500, maxSize: 24, minSize: 16})}
     padding: 30px;
     border: 1px solid ${theme.color.font};
 
     & + cite{
         font-style: normal;
-        font-size: 24px;
-        color: #fff;
+
+        ${font({color: "#fff", maxSize: 24, minSize: 16})}
         padding: 15px;
         border: 1px solid ${theme.color.font};
     }
@@ -164,7 +158,7 @@ const StyledQ = styled.q`
         color: ${theme.color.font};
         background-color: ${theme.color.primaryBg};
         height: 30px;
-        font-size: 2.5em;
+        font-size: 64px;
         position: absolute;
         top: -25px;
     }
@@ -177,9 +171,21 @@ const StyledQ = styled.q`
         color: ${theme.color.font};
         background-color: ${theme.color.primaryBg};
         height: 30px;
-        font-size: 2.5em;
+        font-size: 64px;
         position: absolute;
         bottom: -18px;
         right: 20px
+    }
+
+    @media ${theme.media.tablet}{
+        padding: 25px;
+
+        & + cite{
+            padding: 12px
+        }
+    }
+
+    @media ${theme.media.mobile}{
+        padding: 15px;
     }
 `
