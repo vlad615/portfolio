@@ -1,10 +1,10 @@
-import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
-import { SectionTitle } from "../../../../components/title/SectionTitle"
-import { StyledButton } from "../../../../components/Buttons"
+import { FlexWrapper } from "../../../components/wrapper/FlexWrapper"
+import { SectionTitle } from "../../../components/title/SectionTitle"
+import { StyledButton } from "../../../components/Buttons"
 import styled from "styled-components"
-import bg from "../../../../accets/Image.svg"
-import { Container } from "../../../../components/wrapper/Container"
-import { theme } from "../../../Themes"
+import bg from "../../../accets/Image.svg"
+import { Container } from "../../../components/wrapper/Container"
+import { theme } from "../../../styles/Themes"
 
 type AboutProps = {
     text: string;

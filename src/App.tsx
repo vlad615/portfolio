@@ -1,10 +1,10 @@
-import { Header } from './styles/layout/header/Header';
-import { Main } from './styles/layout/sections/main/Main';
-import { Pojects } from './styles/layout/sections/projects/Projects';
-import { Skills } from './styles/layout/sections/skills/Skills';
-import { About } from './styles/layout/sections/about/About';
-import { Contacts } from './styles/layout/sections/contacts/Contacts';
-import { Footer } from './styles/layout/footer/Footer';
+import { Header } from './layout/header/Header';
+import { Main } from './layout/sections/main/Main';
+import { Pojects } from './layout/sections/projects/Projects';
+import { Skills } from './layout/sections/skills/Skills';
+import { About } from './layout/sections/about/About';
+import { Contacts } from './layout/sections/contacts/Contacts';
+import { Footer } from './layout/footer/Footer';
 
 function App() {
     const textAbout = `Hello, i’m Elias!

@@ -1,12 +1,12 @@
-import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
+import { FlexWrapper } from "../../../components/wrapper/FlexWrapper"
 import { ProjectCard } from "./ProjectCard"
-import { SectionTitle } from "../../../../components/title/SectionTitle"
-import protect from "../../../../accets/projects/Protect.jpg"
-import kahoot from "../../../../accets/projects/Kahoot.jpg"
-import Chert from "../../../../accets/projects/ChertNodes.jpg"
+import { SectionTitle } from "../../../components/title/SectionTitle"
+import protect from "../../../accets/projects/Protect.jpg"
+import kahoot from "../../../accets/projects/Kahoot.jpg"
+import Chert from "../../../accets/projects/ChertNodes.jpg"
 import { styled } from "styled-components"
-import { Container } from "../../../../components/wrapper/Container"
-import { theme } from "../../../Themes"
+import { Container } from "../../../components/wrapper/Container"
+import { theme } from "../../../styles/Themes"
 
 
 export const Pojects = () => {

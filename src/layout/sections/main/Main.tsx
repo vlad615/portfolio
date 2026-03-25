@@ -1,12 +1,12 @@
 import styled from "styled-components"
-import { theme } from "../../../Themes"
-import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
-import { Container } from "../../../../components/wrapper/Container"
-import { ContactIcons } from "../../../../components/icons/ContactIcons"
-import { H1 } from "../../../../components/title/H1"
-import frame from "./../../../../accets/Abstract.png"
-import me from "../../../../accets/me.webp"
-import { StyledButton } from "../../../../components/Buttons"
+import { theme } from "../../../styles/Themes"
+import { FlexWrapper } from "../../../components/wrapper/FlexWrapper"
+import { Container } from "../../../components/wrapper/Container"
+import { ContactIcons } from "../../../components/icons/ContactIcons"
+import { H1 } from "../../../components/title/H1"
+import frame from "./../../../accets/Abstract.png"
+import me from "../../../accets/me.webp"
+import { StyledButton } from "../../../components/Buttons"
 
 export const Main = () => {
     return (

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "../../../Themes";
+import { theme } from "../../../styles/Themes";
 
 type SkillsCardProps = {
     group: string;
@@ -15,7 +15,7 @@ export const SkillsCard = (props: SkillsCardProps) => {
 )}
 
 const SkillWrapper = styled.div`
-    max-width: calc(600px / 3 - 15px);
+    max-width: 190px;
     border: solid 1px ${theme.color.font};
 `
 

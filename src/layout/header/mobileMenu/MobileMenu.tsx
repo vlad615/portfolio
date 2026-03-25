@@ -1,7 +1,7 @@
 import { css, styled } from "styled-components"
-import { theme } from "../../../Themes"
-import { Logo } from "../../../../components/logo/Logo"
-import { ContactIcons } from "../../../../components/icons/ContactIcons"
+import { theme } from "../../../styles/Themes"
+import { Logo } from "../../../components/logo/Logo"
+import { ContactIcons } from "../../../components/icons/ContactIcons"
 
 
 export const MobileMenu = () =>{

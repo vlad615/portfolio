@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
-import { Logo } from "../../../components/logo/Logo";
+import { Logo } from "../../components/logo/Logo";
 import { Menu } from "./menu/Menu";
-import { FlexWrapper } from "../../../components/wrapper/FlexWrapper";
-import { Container } from "../../../components/wrapper/Container";
-import { theme } from "../../Themes";
+import { FlexWrapper } from "../../components/wrapper/FlexWrapper";
+import { Container } from "../../components/wrapper/Container";
+import { theme } from "../../styles/Themes";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
 
 export const Header = () => {

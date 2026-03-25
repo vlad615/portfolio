@@ -1,9 +1,9 @@
 import styled from "styled-components"
-import { FlexWrapper } from "../../../components/wrapper/FlexWrapper"
-import { Container } from "../../../components/wrapper/Container"
-import { Logo } from "../../../components/logo/Logo"
-import { ContactIcons } from "../../../components/icons/ContactIcons"
-import { theme } from "../../Themes"
+import { FlexWrapper } from "../../components/wrapper/FlexWrapper"
+import { Container } from "../../components/wrapper/Container"
+import { Logo } from "../../components/logo/Logo"
+import { ContactIcons } from "../../components/icons/ContactIcons"
+import { theme } from "../../styles/Themes"
 
 export const Footer = () => {
     return(

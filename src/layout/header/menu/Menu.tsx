@@ -1,5 +1,5 @@
 import { styled } from "styled-components"
-import { theme } from "../../../Themes"
+import { theme } from "../../../styles/Themes"
 
 
 export const Menu = () =>{

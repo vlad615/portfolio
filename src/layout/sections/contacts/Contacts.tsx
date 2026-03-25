@@ -1,9 +1,9 @@
 import styled from "styled-components"
-import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
-import { Icon } from "../../../../components/icons/Icon"
-import { SectionTitle } from "../../../../components/title/SectionTitle"
-import { theme } from "../../../Themes"
-import { Container } from "../../../../components/wrapper/Container"
+import { FlexWrapper } from "../../../components/wrapper/FlexWrapper"
+import { Icon } from "../../../components/icons/Icon"
+import { SectionTitle } from "../../../components/title/SectionTitle"
+import { theme } from "../../../styles/Themes"
+import { Container } from "../../../components/wrapper/Container"
 
 export const Contacts = () => {
     return(
