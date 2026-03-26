@@ -38,7 +38,7 @@ export const Main = () => {
 }
 
 const Section = styled.section`
-    margin: 30px 0 75px;
+    margin: 90px 0 75px;
     position: relative;
     overflow: hidden;
 
@@ -53,20 +53,23 @@ const Section = styled.section`
         bottom: 10%;
         transform: translateX(850px);
     }
+    
 `
 
 const ContactWrapper = styled.div`
     position: fixed;
     left: 50%;
+    top: 200px;
     transform: translateX(-580px);
+    z-index: 96;
 
     &::before{
         content: "";
         position: absolute;
         background-color: ${theme.color.font};
         width: 1px;
-        height: 120px;
-        top: -135px;
+        height: 195px;
+        top: -210px;
         right: 50%;}
     
     @media screen and (max-width: 1180px){

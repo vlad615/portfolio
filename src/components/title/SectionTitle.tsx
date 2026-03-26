@@ -28,7 +28,7 @@ export const SectionTitle = styled.h2<StyledTitleProps>`
         content: "";
         position: absolute;
         height: 1px;
-        width: ${props => props.afterWidth || "0px"};
+        width: clamp(0px, -245px + 73vw , ${props => props.afterWidth || "0px"}) ;
         background-color: ${theme.color.accent};
         transform: translateX(15px);
         top: 50%;

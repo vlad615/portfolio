@@ -3,7 +3,7 @@ import { ProjectCard } from "./ProjectCard"
 import { SectionTitle } from "../../../components/title/SectionTitle"
 import protect from "../../../accets/projects/Protect.jpg"
 import kahoot from "../../../accets/projects/Kahoot.jpg"
-import Chert from "../../../accets/projects/ChertNodes.jpg"
+import Chert from "../../../accets/projects/ChertNodes.png"
 import { styled } from "styled-components"
 import { Container } from "../../../components/wrapper/Container"
 import { theme } from "../../../styles/Themes"
@@ -17,13 +17,12 @@ export const Pojects = () => {
                     <SectionTitle afterWidth="510px">projects</SectionTitle>
                     <Link href="">View all ⇝</Link>
                 </TitleWrapper>
-                <FlexWrapper $justify="space-between" $align="flex-start">
+                <Wrapper>
                     <ProjectCard img={protect} tools={["React", "Express", "Node.js", "HTML", "SCSS", "Python", "FLask"]} title="ProtectX" description="Discord anti-crash bot"/>
                     <ProjectCard img={kahoot} tools={["Express", "Node.js", "CSS"]} title="Kahoot Answers Viewer" description="Get answers to your kahoot quiz"/>
                     <ProjectCard img={Chert} tools={["HTML", "Python", "FLask"]} title="ChertNodes" description="Minecraft servers hosting"/>
-                </FlexWrapper>
+                </Wrapper>
             </Container>
-            
         </Section>
 
     )
@@ -52,6 +51,16 @@ const TitleWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
+`
+
+const Wrapper = styled.div`
+    display: flex;
+    align-items: start;
+    gap: 15px;
+
+    @media ${theme.media.tablet}{
+        flex-wrap: wrap;
+    }
 `
 
 const Link = styled.a`

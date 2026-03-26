@@ -2,6 +2,7 @@ import { css, styled } from "styled-components"
 import { theme } from "../../../styles/Themes"
 import { Logo } from "../../../components/logo/Logo"
 import { ContactIcons } from "../../../components/icons/ContactIcons"
+import { StyledButton } from "../../../components/Buttons"
 
 
 export const MobileMenu = () =>{
@@ -19,6 +20,7 @@ export const MobileMenu = () =>{
                     <li><StyledA href="">about-me</StyledA></li>
                     <li><StyledA href="">contacts</StyledA></li>
                 </ul>
+                <StyledButton as="a" fontSize="24px" border="3px solid">Contact me!!</StyledButton>
                 <SytledSelect id="language">
                     <option value="english">EN</option>
                     <option value="russian">RU</option>
@@ -46,11 +48,15 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
     right: 0;
     padding: 15px 15px 35px;
     display: none;
+    z-index: 98;
     background-color: ${theme.color.primaryBg};
+    opacity: 90%;
 
     ${props => props.isOpen && css<{isOpen: boolean}>`
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
     `}
 
     ul{
@@ -59,8 +65,8 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
         font-size: 32px;       
     }
 
-    ul:nth-of-type(1) li{
-        margin-bottom: 30px;
+    ul:nth-of-type(1) li + li{
+        margin-top: 30px;
     }
 
     ul:nth-of-type(2){

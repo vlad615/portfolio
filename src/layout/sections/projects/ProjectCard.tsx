@@ -32,7 +32,12 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
 const CardWrapper = styled.div`
     max-width: 330px;
+    min-width: 240px;
     border: solid 1px ${theme.color.font};
+    @media ${theme.media.tablet}{
+        flex: 1 1 0%;
+        max-width: unset;
+}
 `
 
 const StyledImg = styled.img`

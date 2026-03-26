@@ -1,19 +1,23 @@
 import styled, { css } from "styled-components";
+import { theme } from "../styles/Themes";
 
 type ButtonsProps = {
     width?: string;
+    fontSize?: string; 
     $dark?: boolean | null;
+    border?: string;
 }
 
 export const StyledButton = styled.button<ButtonsProps>`
     font-family: "Fira Code";
     font-weight: 500;
-    font-size: 16px;
+    font-size: ${props => props.fontSize || "16px"};
     color: #fff;
-    border: 1px solid #c778dd;
+    border: ${ props => props.border || `1px solid ${theme.color.accent}`};
+    border-color: ${theme.color.accent};
     padding: 8px 16px;
     background-color: transparent;
-    max-width: ${props => props.width};
+    max-width: ${props => props.width || "none"};
     transition: background-color 0.2s linear;
 
     &:hover{

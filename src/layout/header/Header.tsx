@@ -24,10 +24,19 @@ export const Header = () => {
 }
 
 const StyledHeader = styled.header`
-    padding: 30px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 5px 0;
+    background-color: ${theme.color.primaryBg};
+    z-index: 95;
 
     @media ${theme.media.tablet}{
         padding: 15px 0;
+    }
+
+    @media ${theme.media.mobile}{
+        padding: 5px 0;
     }
 `
 
