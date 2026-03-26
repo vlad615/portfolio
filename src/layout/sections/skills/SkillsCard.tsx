@@ -17,6 +17,13 @@ export const SkillsCard = (props: SkillsCardProps) => {
 const SkillWrapper = styled.div`
     max-width: 190px;
     border: solid 1px ${theme.color.font};
+    background-color: ${theme.color.primaryBg};
+
+    @media ${theme.media.tablet}{
+        min-width: 240px;
+        max-width: unset;
+        flex-grow: 1;
+    }
 `
 
 const StyledH3 = styled.h3`

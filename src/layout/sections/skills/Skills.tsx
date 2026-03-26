@@ -11,7 +11,7 @@ export const Skills = () => {
     <Section>
         <Container>
             <SectionTitle afterWidth="240px" mgb="50px">skills</SectionTitle>
-            <FlexWrapper $justify="space-between" >
+            <FlexWrapper $justify="space-between" $align="flex-end">
                 <ImgWrapper>
                     <StyledImg src={right} />
                 </ImgWrapper>
@@ -35,24 +35,21 @@ const Section = styled.section`
 
 const SkillsWrapper = styled.div`
     display: flex;
-    max-width: 600px;
+    max-height: 300px;
     gap: 15px;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
 
-    @media ${theme.media.large}{
-        flex-direction: row;
-        justify-content: space-between;
-        max-width: none;
+    @media ${theme.media.tablet}{
+        flex-wrap: wrap;
+        max-height: unset
     }
 `
 
 const ImgWrapper = styled.div`
     max-width: 350px;
-    align-self: flex-end;
 
-    @media ${theme.media.large}{
+    @media ${theme.media.tablet}{
         display: none;
     }
 `
