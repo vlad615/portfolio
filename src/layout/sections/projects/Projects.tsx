@@ -32,8 +32,7 @@ const Section = styled.section`
     margin-bottom: 100px;
     position: relative;
     overflow: hidden;
-
-
+    
     &::after{
         content: "";
         position: absolute;
@@ -68,13 +67,33 @@ const Wrapper = styled.div`
 `
 
 const Link = styled.a`
+    position: relative;
     font-weight: 500;
     font-size: 16px;
-    color: #fff;
+    color: ${theme.color.hoverFont};
     transition: transform 0.3s linear;
+    overflow: hidden;
     
     &:hover{
         transform: translateX(-5px)
     }
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: ${theme.color.hoverFont};
+        bottom: 0;
+        right: 100%;
+        opacity: 0;
+        transition: all 0.3s linear;
+    }
+
+    &:hover::after{
+        opacity: 1;
+        right: 0;
+    }
+
 
 `
