@@ -44,6 +44,10 @@ const Section = styled.section`
         bottom: 25%;
         transform: translateX(900px);
     }
+
+    @media ${theme.media.large}{
+        margin-bottom: 50px;
+    }
 `
 
 const TitleWrapper = styled.div`

@@ -31,6 +31,14 @@ export const Skills = () => {
 
 const Section = styled.section`
     margin-bottom: 100px;
+    
+    @media ${theme.media.tablet}{
+        margin-bottom: 50px;
+        
+        ${SectionTitle}{
+            margin-bottom: 20px;
+        }
+    }
 `
 
 const SkillsWrapper = styled.div`
@@ -41,8 +49,10 @@ const SkillsWrapper = styled.div`
     flex-wrap: wrap-reverse;
 
     @media ${theme.media.tablet}{
+        flex-direction: row;
+        width: 100%;
         flex-wrap: wrap;
-        max-height: unset
+        max-height: unset;
     }
 `
 

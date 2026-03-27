@@ -33,4 +33,6 @@ export const SectionTitle = styled.h2<StyledTitleProps>`
         transform: translateX(15px);
         top: 50%;
     }
+
+    
 `

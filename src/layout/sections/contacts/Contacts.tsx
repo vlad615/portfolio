@@ -10,7 +10,7 @@ export const Contacts = () => {
         <Section>
             <Container>
                 <SectionTitle afterWidth="130px" mgb="45px">contacts</SectionTitle>
-                <FlexWrapper $justify="space-between">
+                <FlexWrapper $justify="space-between" $gap="30px">
                     <StyledP>
                         I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me
                     </StyledP>
@@ -31,6 +31,13 @@ export const Contacts = () => {
 
 const Section = styled.section`
     margin-bottom: 145px;
+
+    @media ${theme.media.tablet}{
+        margin-bottom: 80px;
+        ${FlexWrapper}{
+            flex-wrap: wrap;
+        }
+    }
 `
 
 

@@ -20,7 +20,6 @@ const SkillWrapper = styled.div`
     background-color: ${theme.color.primaryBg};
 
     @media ${theme.media.tablet}{
-        min-width: 240px;
         max-width: unset;
         flex-grow: 1;
     }

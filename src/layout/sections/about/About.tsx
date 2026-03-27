@@ -15,7 +15,7 @@ export const About = (props: AboutProps) =>{
         <Section>
             <Container>
                 <SectionTitle afterWidth="330px" mgb="20px">about-me</SectionTitle>
-                <FlexWrapper $justify="space-between" $align="flex-start" $wrap="wrap">
+                <FlexWrapper $justify="space-between" $align="flex-start" $gap="30px">
                     <TextWrapper >
                         <StyledP>{props.text}</StyledP>
                         <StyledButton as="a">Read more →</StyledButton>
@@ -31,6 +31,14 @@ export const About = (props: AboutProps) =>{
 
 const Section = styled.section`
     margin-bottom: 100px;
+
+    @media ${theme.media.tablet}{
+        margin-bottom: 50px;
+        ${FlexWrapper}{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
 `
 
 const TextWrapper = styled.div`
@@ -39,6 +47,10 @@ const TextWrapper = styled.div`
     gap: 30px;
     align-items: flex-start;
     max-width: 515px;
+
+    @media ${theme.media.tablet}{
+        max-width: unset;
+    }
 `
 
 const StyledP = styled.p`
@@ -47,7 +59,10 @@ const StyledP = styled.p`
 
 const ImgWrapper = styled.div`
     max-width: 340px;
-    
+    min-width: 280px;
+    @media ${theme.media.tablet}{
+        max-width: 280px;
+    }
 `
 
 const StyledImg = styled.img`

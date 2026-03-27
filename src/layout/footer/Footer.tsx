@@ -10,7 +10,7 @@ export const Footer = () => {
         <StyledFooter>
             <Container>
                 <FlexWrapper direction="column" $gap="50px">
-                    <FlexWrapper $justify="space-between">
+                    <FlexWrapper $justify="space-between" $wrap="wrap" $gap="15px">
                         <div>
                             <FlexWrapper $align="center">
                                 <Logo />
@@ -41,8 +41,12 @@ const StyledSmall = styled.small`
     font-size: 16px;
 `
 
-const StyledP = styled.p`
+const StyledP = styled.h1`
     margin-top: 15px;
+    text-align: start;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
 `
 
 const StyledSpan = styled.span`
