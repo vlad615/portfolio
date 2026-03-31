@@ -31,10 +31,6 @@ const StyledMenu = styled.nav`
         font-weight: 400;
         font-size: 16px;        
     }
-
-    @media ${theme.media.tablet}{
-        display: none;
-    }
 `
 
 const StyledA = styled.a`

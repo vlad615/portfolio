@@ -16,12 +16,16 @@ export const Contacts = () => {
                     </StyledP>
                     <MessageMe>
                         <StyledH3>Massege me here</StyledH3>
-                        <FlexWrapper $justify="center" $align="center" $gap="5px">
-                            <Icon iconId="tg" viewbox="2,1,23,23"/><a href="">@VladislavElmirovich</a>
-                        </FlexWrapper>
-                        <FlexWrapper $justify="center" $align="center" $gap="5px">
-                            <Icon iconId="email" viewbox="0,0,20,20"/><a href="mailto:ambrosov413@gmail.com">ambrosov413@gmail.com</a>
-                        </FlexWrapper>
+                        <a href="">
+                            <FlexWrapper $justify="center" $align="center" $gap="5px">
+                                <Icon iconId="tg" viewbox="2,1,23,23"/>@VladislavElmirovich
+                            </FlexWrapper>
+                        </a>
+                        <a href="mailto:ambrosov413@gmail.com">
+                            <FlexWrapper $justify="center" $align="center" $gap="5px">
+                                <Icon iconId="email" viewbox="0,0,20,20"/>ambrosov413@gmail.com
+                            </FlexWrapper>
+                        </a>
                     </MessageMe>
                 </FlexWrapper>
             </Container>
@@ -61,10 +65,11 @@ const MessageMe = styled.div`
         font-weight: 400;
         font-size: 16px;
         color: #abb2bf;
-        transition: color 0.2 linear;
+        transition: all 0.3s linear;
 
         &:hover{
             color: #fff;
+            transform: translateY(-5px);
         }
     }
 `

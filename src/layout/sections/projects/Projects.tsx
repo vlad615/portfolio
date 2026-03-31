@@ -1,4 +1,3 @@
-import { FlexWrapper } from "../../../components/wrapper/FlexWrapper"
 import { ProjectCard } from "./ProjectCard"
 import { SectionTitle } from "../../../components/title/SectionTitle"
 import protect from "../../../accets/projects/Protect.jpg"

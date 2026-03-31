@@ -3,16 +3,23 @@ import { theme } from "../../../styles/Themes"
 import { Logo } from "../../../components/logo/Logo"
 import { ContactIcons } from "../../../components/icons/ContactIcons"
 import { StyledButton } from "../../../components/Buttons"
+import { useState } from "react"
 
 
 export const MobileMenu = () =>{
+    const [isMenuOpen, setIsMenuopen] = useState(false);
+
+    function changeMenuOpen(){
+        setIsMenuopen(!isMenuOpen)
+    }
+
     return(
         <StyledMenu>
-            <BurgerButton isOpen={false}>
+            <BurgerButton isOpen={isMenuOpen} onClick={changeMenuOpen}>
                 <span></span>
             </BurgerButton>
             
-            <MobileMenuPopup isOpen={false}>
+            <MobileMenuPopup isOpen={isMenuOpen}>
                 <Logo />
                 <ul>
                     <li><StyledA href="">home</StyledA></li>
@@ -34,10 +41,7 @@ export const MobileMenu = () =>{
 }
 
 const StyledMenu = styled.nav`
-    display: none;
-    @media ${theme.media.tablet}{
-        display: block;
-    }
+
 `
 
 const MobileMenuPopup = styled.div<{isOpen: boolean}>`

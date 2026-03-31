@@ -5,16 +5,24 @@ import { FlexWrapper } from "../../components/wrapper/FlexWrapper";
 import { Container } from "../../components/wrapper/Container";
 import { theme } from "../../styles/Themes";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
+import React from "react";
 
 export const Header = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 768;
+    
+    React.useEffect(()=>{
+        const hendleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", hendleWindowResize);}, [])
+
     return (
         <StyledHeader>
             <Container>
                 <FlexWrapper $justify="space-between" $align="center">
                     <Logo />
                     <FlexWrapper $gap="30px">
-                        <Menu />
-                        <MobileMenu />
+                        {width <= breakpoint ? <MobileMenu />
+                                            : <Menu />}
                     </FlexWrapper>
                 </FlexWrapper>
                     
