@@ -10,6 +10,7 @@ import { S } from "./StylesMain"
 import { Testimony } from "./Testimony"
 import { pinkLight, light } from "../../../styles/animations"
 
+
 export const Main = () => {
     return (
         <Section>

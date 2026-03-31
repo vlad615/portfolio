@@ -1,12 +1,30 @@
 import { styled } from "styled-components"
 import { theme } from "../../../styles/Themes"
 import { font } from "../../../styles/Commun"
+import Typewriter from 'typewriter-effect';
+
 
 
 export const Testimony = () => {
     return(
         <QuotWrapper>
-            <StyledQ>With great power comes great electricity bill</StyledQ>
+            <StyledQ>
+                <p>With great power comes great electricity bill</p>
+                <Typewriter
+                    onInit={(typewriter) => {
+                    typewriter.typeString('With great power comes great electricity bill.')
+                    .callFunction((state) => {
+                    if (state.elements.cursor) {
+                        state.elements.cursor.style.display = 'none';}
+                    })
+                    .start();
+                }}
+                    options={{
+                    cursor: '',
+                    delay: 30
+                }}
+                /> 
+            </StyledQ>
             <cite>- Dr. Who</cite>
         </QuotWrapper>
     )
@@ -26,6 +44,11 @@ const StyledQ = styled.q`
     ${font({color: "#fff", weight: 500, maxSize: 24, minSize: 16})}
     padding: 30px;
     border: 1px solid ${theme.color.font};
+
+    p{
+        opacity: 0;
+        line-height: 0;
+    }
 
     & + cite{
         font-style: normal;
