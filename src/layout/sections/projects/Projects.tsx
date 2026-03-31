@@ -6,6 +6,7 @@ import Chert from "../../../accets/projects/ChertNodes.png"
 import { styled } from "styled-components"
 import { Container } from "../../../components/wrapper/Container"
 import { theme } from "../../../styles/Themes"
+import { light } from "../../../styles/animations"
 
 
 export const Pojects = () => {
@@ -41,6 +42,7 @@ const Section = styled.section`
         right: 50%;
         bottom: 25%;
         transform: translateX(900px);
+        animation: ${light} 2s ease-in-out infinite ;
     }
 
     @media ${theme.media.large}{

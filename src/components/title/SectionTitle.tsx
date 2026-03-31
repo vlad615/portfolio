@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../styles/Themes";
+import { pinkLight, light } from "../../styles/animations";
 
 type StyledTitleProps = {
     weigth?: number;
@@ -22,6 +23,8 @@ export const SectionTitle = styled.h2<StyledTitleProps>`
         content: '${props => props.before || "#"}';
         color: ${theme.color.accent};
         transition: color 0.2s linear;
+        /* animation: ${light} 2s ease-in-out infinite ; */
+
     }
     
     &::after{
@@ -32,6 +35,8 @@ export const SectionTitle = styled.h2<StyledTitleProps>`
         background-color: ${theme.color.accent};
         transform: translateX(15px);
         top: 50%;
+        animation: ${pinkLight} 2s ease-in-out infinite ;
+
     }
 
     

@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { theme } from "../styles/Themes";
+import { pinkLight } from "../styles/animations";
 
 type ButtonsProps = {
     width?: string;
@@ -20,6 +21,7 @@ export const StyledButton = styled.button<ButtonsProps>`
     background-color:${props => props.backgraund || "transparent"};
     max-width: ${props => props.width || "none"};
     transition: background-color 0.2s linear;
+    animation: ${pinkLight} 2s ease-in-out infinite ;
 
     &:hover{
         background: rgba(199, 120, 221, 0.2);

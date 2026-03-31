@@ -4,6 +4,8 @@ import { Logo } from "../../../components/logo/Logo"
 import { ContactIcons } from "../../../components/icons/ContactIcons"
 import { StyledButton } from "../../../components/Buttons"
 import { useState } from "react"
+import { Menu } from "../menu/Menu"
+import { Languages } from "../menu/Languages"
 
 
 export const MobileMenu = () =>{
@@ -18,31 +20,18 @@ export const MobileMenu = () =>{
             <BurgerButton isOpen={isMenuOpen} onClick={changeMenuOpen}>
                 <span></span>
             </BurgerButton>
-            
             <MobileMenuPopup isOpen={isMenuOpen}>
                 <Logo />
-                <ul>
-                    <li><StyledA href="">home</StyledA></li>
-                    <li><StyledA href="">works</StyledA></li>
-                    <li><StyledA href="">about-me</StyledA></li>
-                    <li><StyledA href="">contacts</StyledA></li>
-                </ul>
+                <Menu />
                 <StyledButton as="a" fontSize="24px" border="3px solid">Contact me!!</StyledButton>
-                <SytledSelect id="language">
-                    <option value="english">EN</option>
-                    <option value="russian">RU</option>
-                    <option value="ukrainian">UA</option>
-                    <option value="belarusian">BE</option>
-                </SytledSelect> 
+                <Languages fontSize="32px"/>
                 <ContactIcons width="64" height="64"/>
             </MobileMenuPopup>
         </StyledMenu>
     )
 }
 
-const StyledMenu = styled.nav`
-
-`
+const StyledMenu = styled.nav``
 
 const MobileMenuPopup = styled.div<{isOpen: boolean}>`
     position: fixed;
@@ -56,21 +45,12 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
     background-color: ${theme.color.primaryBg};
     opacity: 90%;
 
-    ${props => props.isOpen && css<{isOpen: boolean}>`
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 30px;
-    `}
-
-    ul{
+    ul:nth-of-type(1){
         margin-top: 55px;
-        font-weight: 500;
-        font-size: 32px;       
-    }
-
-    ul:nth-of-type(1) li + li{
-        margin-top: 30px;
+        
+        li + li{
+            margin-top: 30px;
+        }
     }
 
     ul:nth-of-type(2){
@@ -80,7 +60,13 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
         transform: translateX(50%);
         gap: 20px;
     }
-    
+
+    ${props => props.isOpen && css<{isOpen: boolean}>`
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    `}    
 `
 
 const BurgerButton = styled.button<{isOpen: boolean}>`
@@ -100,7 +86,6 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
             transform: rotate(45deg);        
         `}
 
-
         &::after{
             content: "";
             display: block;
@@ -114,37 +99,5 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
                 transform: rotate(90deg) translateY(0);        
             `}
         }
-    }
-`
-
-const StyledA = styled.a`
-    color: ${theme.color.font}; 
-    transition: color 0.2s linear;
-
-    &::before {
-        content: "#";
-        color: ${theme.color.accent};
-        transition: color 0.2s linear;
-    }
-    
-    &:hover{
-        color: ${theme.color.hoverFont};;
-    }
-
-    &:hover::before {
-        filter: brightness(130%)
-    }
-`
-
-const SytledSelect = styled.select`
-    font-weight: 600;
-    font-size: 32px;
-    max-width: 65px;
-    color: ${theme.color.font};
-    background-color: ${theme.color.primaryBg};
-    border: none;
-
-    &:hover{
-        color: ${theme.color.hoverFont};
     }
 `

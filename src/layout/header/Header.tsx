@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import { Logo } from "../../components/logo/Logo";
-import { Menu } from "./menu/Menu";
+import { DesktopMenu } from "./desktopMenu/DesktopMenu";
 import { FlexWrapper } from "../../components/wrapper/FlexWrapper";
 import { Container } from "../../components/wrapper/Container";
 import { theme } from "../../styles/Themes";
@@ -22,10 +22,9 @@ export const Header = () => {
                     <Logo />
                     <FlexWrapper $gap="30px">
                         {width <= breakpoint ? <MobileMenu />
-                                            : <Menu />}
+                                            : <DesktopMenu />}
                     </FlexWrapper>
                 </FlexWrapper>
-                    
             </Container>
         </StyledHeader>
     )

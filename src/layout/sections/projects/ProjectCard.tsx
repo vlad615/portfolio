@@ -22,7 +22,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
         <Wrapper>
             <Title>{props.title}</Title>
             <StyledP>{props.description}</StyledP>
-            <FlexWrapper $gap="5px">
+            <FlexWrapper $gap="15px">
                 <StyledButton as="a">Live ↭</StyledButton>
                 <StyledButton as="a" $dark>Cached ≥</StyledButton>
             </FlexWrapper>
