@@ -4,12 +4,13 @@ import { Icon } from "../../../components/icons/Icon"
 import { SectionTitle } from "../../../components/title/SectionTitle"
 import { theme } from "../../../styles/Themes"
 import { Container } from "../../../components/wrapper/Container"
+import { light } from "../../../styles/animations"
 
 export const Contacts = () => {
     return(
         <Section>
             <Container>
-                <SectionTitle afterWidth="130px" mgb="45px">contacts</SectionTitle>
+                <SectionTitle $afterWidth="130px" $mgb="45px">contacts</SectionTitle>
                 <FlexWrapper $justify="space-between" $gap="30px">
                     <StyledP>
                         I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me
@@ -35,6 +36,22 @@ export const Contacts = () => {
 
 const Section = styled.section`
     margin-bottom: 145px;
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        display: inline-block;
+        background-image: url("/elements/Dots.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        right: 50%;
+        bottom: 10%;
+        transform: translateX(-630px);
+        animation: ${light} 2s ease-in-out infinite;
+    }
 
     @media ${theme.media.tablet}{
         margin-bottom: 80px;

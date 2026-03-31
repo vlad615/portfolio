@@ -14,7 +14,7 @@ export const Pojects = () => {
         <Section>
             <Container>
                 <TitleWrapper>
-                    <SectionTitle afterWidth="510px">projects</SectionTitle>
+                    <SectionTitle $afterWidth="510px">projects</SectionTitle>
                     <Link href="">View all ⇝</Link>
                 </TitleWrapper>
                 <Wrapper>
@@ -41,7 +41,7 @@ const Section = styled.section`
         border: 1px solid ${theme.color.font};
         right: 50%;
         bottom: 25%;
-        transform: translateX(900px);
+        transform: translateX(770px);
         animation: ${light} 2s ease-in-out infinite ;
     }
 

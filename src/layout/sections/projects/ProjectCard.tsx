@@ -18,7 +18,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
             <StyledImg src={props.img} />
         </ImgWrapper>
         
-        <StyledUl>{props.tools.map(x => <li>{x}</li>)}</StyledUl>
+        <StyledUl>{props.tools.map(x => <li key={x}>{x}</li>)}</StyledUl>
         <Wrapper>
             <Title>{props.title}</Title>
             <StyledP>{props.description}</StyledP>
@@ -34,7 +34,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
 }
 
-const CardWrapper = styled.div`
+const CardWrapper = styled.article`
     max-width: 330px;
     min-width: 240px;
     border: solid 1px ${theme.color.font};

@@ -17,13 +17,13 @@ export const MobileMenu = () =>{
 
     return(
         <StyledMenu>
-            <BurgerButton isOpen={isMenuOpen} onClick={changeMenuOpen}>
+            <BurgerButton $isOpen={isMenuOpen} onClick={changeMenuOpen}>
                 <span></span>
             </BurgerButton>
-            <MobileMenuPopup isOpen={isMenuOpen}>
+            <MobileMenuPopup $isOpen={isMenuOpen}>
                 <Logo />
                 <Menu />
-                <StyledButton as="a" fontSize="24px" border="3px solid">Contact me!!</StyledButton>
+                <StyledButton as="a" fontSize="24px" $border="3px solid">Contact me!!</StyledButton>
                 <Languages fontSize="32px"/>
                 <ContactIcons width="64" height="64"/>
             </MobileMenuPopup>
@@ -33,7 +33,7 @@ export const MobileMenu = () =>{
 
 const StyledMenu = styled.nav``
 
-const MobileMenuPopup = styled.div<{isOpen: boolean}>`
+const MobileMenuPopup = styled.div<{$isOpen: boolean}>`
     position: fixed;
     top: 0;
     bottom: 0;
@@ -61,7 +61,7 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
         gap: 20px;
     }
 
-    ${props => props.isOpen && css<{isOpen: boolean}>`
+    ${props => props.$isOpen && css<{$isOpen: boolean}>`
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -69,7 +69,7 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
     `}    
 `
 
-const BurgerButton = styled.button<{isOpen: boolean}>`
+const BurgerButton = styled.button<{$isOpen: boolean}>`
     position: fixed;
     top: 15px;
     right: 15px;
@@ -82,7 +82,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
         width: 25px;
         height: 2px;
         background-color: ${theme.color.hoverFont};
-        ${props => props.isOpen && css<{isOpen: boolean}>`
+        ${props => props.$isOpen && css<{$isOpen: boolean}>`
             transform: rotate(45deg);        
         `}
 
@@ -94,7 +94,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
             right: 0;
             background-color: ${theme.color.hoverFont};
             transform: translate(10px, 5px);
-            ${props => props.isOpen && css<{isOpen: boolean}>`
+            ${props => props.$isOpen && css<{$isOpen: boolean}>`
                 width: 24px;
                 transform: rotate(90deg) translateY(0);        
             `}

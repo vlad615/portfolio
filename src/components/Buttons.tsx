@@ -6,7 +6,7 @@ type ButtonsProps = {
     width?: string;
     fontSize?: string; 
     $dark?: boolean | null;
-    border?: string;
+    $border?: string;
     backgraund?: string;
 }
 
@@ -15,7 +15,7 @@ export const StyledButton = styled.button<ButtonsProps>`
     font-weight: 500;
     font-size: ${props => props.fontSize || "16px"};
     color: #fff;
-    border: ${ props => props.border || `1px solid ${theme.color.accent}`};
+    border: ${ props => props.$border || `1px solid ${theme.color.accent}`};
     border-color: ${theme.color.accent};
     padding: 8px 16px;
     background-color:${props => props.backgraund || "transparent"};

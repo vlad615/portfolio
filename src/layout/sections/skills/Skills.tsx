@@ -10,7 +10,7 @@ export const Skills = () => {
     return(
     <Section>
         <Container>
-            <SectionTitle afterWidth="240px" mgb="50px">skills</SectionTitle>
+            <SectionTitle $afterWidth="240px" $mgb="50px">skills</SectionTitle>
             <FlexWrapper $justify="space-between" $align="flex-end">
                 <ImgWrapper>
                     <StyledImg src={right} />

@@ -12,12 +12,7 @@ export const Testimony = () => {
                 <p>With great power comes great electricity bill</p>
                 <Typewriter
                     onInit={(typewriter) => {
-                    typewriter.typeString('With great power comes great electricity bill.')
-                    .callFunction((state) => {
-                    if (state.elements.cursor) {
-                        state.elements.cursor.style.display = 'none';}
-                    })
-                    .start();
+                    typewriter.typeString('With great power comes great electricity bill').start();
                 }}
                     options={{
                     cursor: '',
@@ -56,6 +51,7 @@ const StyledQ = styled.q`
         ${font({color: "#fff", maxSize: 24, minSize: 16})}
         padding: 15px;
         border: 1px solid ${theme.color.font};
+        border-top: none;
     }
 
     &::before{

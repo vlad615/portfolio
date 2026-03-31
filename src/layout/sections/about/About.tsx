@@ -15,15 +15,13 @@ export const About = (props: AboutProps) =>{
     return(
         <Section>
             <Container>
-                <SectionTitle afterWidth="330px" mgb="20px">about-me</SectionTitle>
+                <SectionTitle $afterWidth="330px" $mgb="20px">about-me</SectionTitle>
                 <FlexWrapper $justify="space-between" $align="flex-start" $gap="30px">
                     <TextWrapper >
                         <StyledP>{props.text}</StyledP>
                         <StyledButton as="a">Read more →</StyledButton>
                     </TextWrapper>
-                    <ImgWrapper>
-                        <StyledImg src={bg}/>
-                    </ImgWrapper>
+                    <StyledImg src={bg}/>
                 </FlexWrapper>
             </Container>
         </Section>
@@ -32,6 +30,7 @@ export const About = (props: AboutProps) =>{
 
 const Section = styled.section`
     position: relative;
+    overflow: hidden;
     margin-bottom: 100px;
 
     &::before{
@@ -42,7 +41,7 @@ const Section = styled.section`
         border: 1px solid ${theme.color.font};
         right: 50%;
         bottom: 50%;
-        transform: translateX(-900px);
+        transform: translateX(-630px);
         animation: ${light} 2s ease-in-out infinite ;
     }
 
@@ -57,15 +56,14 @@ const Section = styled.section`
         height: 100px;
         right: 50%;
         bottom: 10%;
-        transform: translateX(900px);
+        transform: translateX(700px);
         animation: ${light} 2s ease-in-out infinite;
-
     }
 
     @media ${theme.media.tablet}{
         margin-bottom: 50px;
         ${FlexWrapper}{
-            flex-wrap: wrap;
+            flex-wrap: wrap-reverse;
             justify-content: center;
         }
     }
@@ -87,15 +85,20 @@ const StyledP = styled.p`
     white-space: pre-wrap;
 `
 
-const ImgWrapper = styled.div`
-    max-width: 340px;
+// const ImgWrapper = styled.div`
+//     max-width: 340px;
+//     min-width: 280px;
+//     @media ${theme.media.tablet}{
+//         max-width: 280px;
+//     }
+// `
+
+const StyledImg = styled.img`
+    width: 100%;
+        max-width: 340px;
     min-width: 280px;
     @media ${theme.media.tablet}{
         max-width: 280px;
     }
-`
-
-const StyledImg = styled.img`
-    width: 100%;
     z-index: 0;
 `

@@ -50,7 +50,7 @@ const Section = styled.section`
         border: 1px solid ${theme.color.font};
         right: 50%;
         bottom: 10%;
-        transform: translateX(850px);
+        transform: translateX(690px);
         animation: ${light} 2s ease-in-out infinite ;
 
     }
