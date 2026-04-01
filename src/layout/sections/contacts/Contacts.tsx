@@ -5,29 +5,38 @@ import { SectionTitle } from "../../../components/title/SectionTitle"
 import { theme } from "../../../styles/Themes"
 import { Container } from "../../../components/wrapper/Container"
 import { light } from "../../../styles/animations"
+import { Fade } from "react-awesome-reveal"
 
 export const Contacts = () => {
     return(
         <Section>
             <Container>
-                <SectionTitle $afterWidth="130px" $mgb="45px">contacts</SectionTitle>
+                <Fade>
+                    <SectionTitle $afterWidth="130px" $mgb="45px">contacts</SectionTitle>
+                </Fade>
+                
                 <FlexWrapper $justify="space-between" $gap="30px">
-                    <StyledP>
-                        I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me
-                    </StyledP>
-                    <MessageMe>
-                        <StyledH3>Massege me here</StyledH3>
-                        <a href="https://t.me/VladislavElmirovich" target="_blank" rel="noopener noreferrer">
-                            <FlexWrapper $justify="center" $align="center" $gap="5px">
-                                <Icon iconId="tg" viewbox="2,1,23,23"/>@VladislavElmirovich
-                            </FlexWrapper>
-                        </a>
-                        <a href="mailto:ambrosov413@gmail.com">
-                            <FlexWrapper $justify="center" $align="center" $gap="5px">
-                                <Icon iconId="email" viewbox="0,0,20,20"/>ambrosov413@gmail.com
-                            </FlexWrapper>
-                        </a>
-                    </MessageMe>
+                    <Fade direction="left">
+                        <StyledP>
+                            I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me
+                        </StyledP>
+                    </Fade>
+                    <Fade direction="right">
+                        <MessageMe>
+                            <StyledH3>Massege me here</StyledH3>
+                            <a href="https://t.me/VladislavElmirovich" target="_blank" rel="noopener noreferrer">
+                                <FlexWrapper $justify="center" $align="center" $gap="5px">
+                                    <Icon iconId="tg" viewbox="2,1,23,23"/>@VladislavElmirovich
+                                </FlexWrapper>
+                            </a>
+                            <a href="mailto:ambrosov413@gmail.com">
+                                <FlexWrapper $justify="center" $align="center" $gap="5px">
+                                    <Icon iconId="email" viewbox="0,0,20,20"/>ambrosov413@gmail.com
+                                </FlexWrapper>
+                            </a>
+                        </MessageMe>
+                    </Fade>
+                    
                 </FlexWrapper>
             </Container>
         </Section>

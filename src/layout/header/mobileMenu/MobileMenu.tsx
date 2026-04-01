@@ -6,6 +6,7 @@ import { StyledButton } from "../../../components/Buttons"
 import { useState } from "react"
 import { Menu } from "../menu/Menu"
 import { Languages } from "../menu/Languages"
+import { Fade } from "react-awesome-reveal"
 
 
 export const MobileMenu = () =>{
@@ -21,11 +22,18 @@ export const MobileMenu = () =>{
                 <span></span>
             </BurgerButton>
             <MobileMenuPopup $isOpen={isMenuOpen}>
-                <Logo />
-                <Menu />
-                <StyledButton as="a" fontSize="24px" $border="3px solid">Contact me!!</StyledButton>
-                <Languages fontSize="32px"/>
-                <ContactIcons width="64" height="64"/>
+                
+                    <Logo />
+                    <Menu />
+                    <Fade direction="down">
+                        <StyledButton as="a" fontSize="24px" $border="3px solid">Contact me!!</StyledButton>
+                        <Languages fontSize="32px"/>
+                    </Fade>
+                    
+                
+                    <ContactIcons width="64" height="64"/>
+                
+                
             </MobileMenuPopup>
         </StyledMenu>
     )

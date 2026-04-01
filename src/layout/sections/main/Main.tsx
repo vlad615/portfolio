@@ -9,26 +9,33 @@ import { StyledButton } from "../../../components/Buttons"
 import { S } from "./StylesMain"
 import { Testimony } from "./Testimony"
 import { pinkLight, light } from "../../../styles/animations"
+import { Fade } from "react-awesome-reveal"
 
 
 export const Main = () => {
     return (
         <Section>
             <ContactWrapper><ContactIcons direction="column" /></ContactWrapper> 
+            
             <Container>
                 <Wrapper>
-                    <TextWrapper>
-                        <H1>Vlad is a
-                            <S.StyledSpan> web developer</S.StyledSpan> and
-                            <S.StyledSpan> front-end developer</S.StyledSpan>
-                        </H1>
-                        <S.StyledP>He crafts responsive websites where technologies meet creativity</S.StyledP>
-                        <StyledButton as="a" >Contact me!!</StyledButton>
-                    </TextWrapper>
-                    <S.ImgWrapper>
-                        <S.Photo src={me} alt="Web Developer" />
-                        <S.Frame src={frame} alt="" />
-                    </S.ImgWrapper>
+                    <Fade direction="left">
+                        <TextWrapper>
+                            <H1>Vlad is a
+                                <S.StyledSpan> web developer</S.StyledSpan> and
+                                <S.StyledSpan> front-end developer</S.StyledSpan>
+                            </H1>
+                            <S.StyledP>He crafts responsive websites where technologies meet creativity</S.StyledP>
+                            <StyledButton as="a" >Contact me!!</StyledButton>
+                        </TextWrapper>
+                    </Fade>
+                    <Fade direction="right">
+                        <S.ImgWrapper>
+                            <S.Photo src={me} alt="Web Developer" />
+                            <S.Frame src={frame} alt="" />
+                        </S.ImgWrapper>
+                    </Fade>
+                    
                 </Wrapper>
                 <Testimony />
             </Container>

@@ -1,14 +1,19 @@
 import { styled } from "styled-components"
 import { Menu } from "../menu/Menu"
 import { Languages } from "../menu/Languages"
+import { Fade } from "react-awesome-reveal";
+
 
 
 export const DesktopMenu = () =>{
     return(
-        <StyledMenu>
-            <Menu />
-            <Languages />
-        </StyledMenu>
+        <Fade direction="down">
+            <StyledMenu>
+                <Menu />
+                <Languages />
+            </StyledMenu>
+        </Fade>
+        
     )
 }
 

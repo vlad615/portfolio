@@ -6,6 +6,7 @@ import bg from "../../../accets/man.png"
 import { Container } from "../../../components/wrapper/Container"
 import { theme } from "../../../styles/Themes"
 import { light } from "../../../styles/animations"
+import { Fade } from "react-awesome-reveal"
 
 type AboutProps = {
     text: string;
@@ -15,13 +16,21 @@ export const About = (props: AboutProps) =>{
     return(
         <Section>
             <Container>
-                <SectionTitle $afterWidth="330px" $mgb="20px">about-me</SectionTitle>
+                <Fade>
+                    <SectionTitle $afterWidth="330px" $mgb="20px">about-me</SectionTitle>
+                </Fade>
+                
                 <FlexWrapper $justify="space-between" $align="flex-start" $gap="30px">
-                    <TextWrapper >
-                        <StyledP>{props.text}</StyledP>
-                        <StyledButton as="a">Read more →</StyledButton>
-                    </TextWrapper>
-                    <StyledImg src={bg}/>
+                    <Fade direction="left">
+                        <TextWrapper >
+                            <StyledP>{props.text}</StyledP>
+                            <StyledButton as="a">Read more →</StyledButton>
+                        </TextWrapper>
+                    </Fade>
+                    <Fade direction="right">
+                        <StyledImg src={bg}/>
+                    </Fade>
+                    
                 </FlexWrapper>
             </Container>
         </Section>

@@ -7,6 +7,7 @@ import { styled } from "styled-components"
 import { Container } from "../../../components/wrapper/Container"
 import { theme } from "../../../styles/Themes"
 import { light } from "../../../styles/animations"
+import { Fade } from "react-awesome-reveal"
 
 
 export const Pojects = () => {
@@ -14,14 +15,22 @@ export const Pojects = () => {
         <Section>
             <Container>
                 <TitleWrapper>
-                    <SectionTitle $afterWidth="510px">projects</SectionTitle>
-                    <Link href="">View all ⇝</Link>
+                    <Fade direction="left">
+                        <SectionTitle $afterWidth="510px">projects</SectionTitle>
+                    </Fade>
+                    <Fade direction="right">
+                        <Link href="">View all ⇝</Link>
+                    </Fade>
+                    
                 </TitleWrapper>
-                <Wrapper>
-                    <ProjectCard img={protect} tools={["React", "Express", "Node.js", "HTML", "SCSS", "Python", "FLask"]} title="ProtectX" description="Discord anti-crash bot"/>
-                    <ProjectCard img={kahoot} tools={["Express", "Node.js", "CSS"]} title="Kahoot Answers Viewer" description="Get answers to your kahoot quiz"/>
-                    <ProjectCard img={Chert} tools={["HTML", "Python", "FLask"]} title="ChertNodes" description="Minecraft servers hosting"/>
-                </Wrapper>
+                <Fade>
+                    <Wrapper>
+                        <ProjectCard img={protect} tools={["React", "Express", "Node.js", "HTML", "SCSS", "Python", "FLask"]} title="ProtectX" description="Discord anti-crash bot"/>
+                        <ProjectCard img={kahoot} tools={["Express", "Node.js", "CSS"]} title="Kahoot Answers Viewer" description="Get answers to your kahoot quiz"/>
+                        <ProjectCard img={Chert} tools={["HTML", "Python", "FLask"]} title="ChertNodes" description="Minecraft servers hosting"/>
+                    </Wrapper>
+                </Fade>
+                
             </Container>
         </Section>
 

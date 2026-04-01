@@ -23,7 +23,7 @@ export const Header = () => {
                     <FlexWrapper $gap="30px">
                         {width <= breakpoint ? <MobileMenu />
                                             : <DesktopMenu />}
-                    </FlexWrapper>
+                    </FlexWrapper> 
                 </FlexWrapper>
             </Container>
         </StyledHeader>

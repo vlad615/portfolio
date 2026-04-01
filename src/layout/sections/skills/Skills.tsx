@@ -5,24 +5,33 @@ import { styled } from "styled-components"
 import right from "../../../accets/fiveelements.png"
 import { Container } from "../../../components/wrapper/Container"
 import { theme } from "../../../styles/Themes"
+import { Fade } from "react-awesome-reveal"
 
 export const Skills = () => {
     return(
     <Section>
         <Container>
-            <SectionTitle $afterWidth="240px" $mgb="50px">skills</SectionTitle>
+            <Fade>
+                <SectionTitle $afterWidth="240px" $mgb="50px">skills</SectionTitle>
+            </Fade>
+            
             <FlexWrapper $justify="space-between" $align="flex-end">
-                <ImgWrapper>
-                    <StyledImg src={right} />
-                </ImgWrapper>
+                <Fade direction="left">
+                    <ImgWrapper>
+                        <StyledImg src={right} />
+                    </ImgWrapper>
+                </Fade>
                 
-                <SkillsWrapper>
-                    <SkillsCard group="Tools" values={["VSCode", "Linux", "Git", "Figma", "VSCode", "Linux", "Git", "GitLab CI/CD"]}/>
-                    <SkillsCard group="Languages" values={["TypeScript", "JavaScript", "Python"]}/>
-                    <SkillsCard group="Databases" values={["PostgreSQL", "SQLite", "SQL"]}/>
-                    <SkillsCard group="Other" values={["HTML", "CSS", "Rest", "Jinja", "SCSS"]}/>
-                    <SkillsCard group="Frameworks" values={["React", "FastAPI", "Django"]}/>
-                </SkillsWrapper>
+                <Fade direction="right">
+                    <SkillsWrapper>
+                        <SkillsCard group="Tools" values={["VSCode", "Linux", "Git", "Figma", "VSCode", "Linux", "Git", "GitLab CI/CD"]}/>
+                        <SkillsCard group="Languages" values={["TypeScript", "JavaScript", "Python"]}/>
+                        <SkillsCard group="Databases" values={["PostgreSQL", "SQLite", "SQL"]}/>
+                        <SkillsCard group="Other" values={["HTML", "CSS", "Rest", "Jinja", "SCSS"]}/>
+                        <SkillsCard group="Frameworks" values={["React", "FastAPI", "Django"]}/>
+                    </SkillsWrapper>
+                </Fade>
+                
             </FlexWrapper>
         </Container>
     </Section>

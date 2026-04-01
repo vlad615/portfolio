@@ -1,15 +1,19 @@
 import styled from "styled-components"
 import { theme } from "../../../styles/Themes"
+import { Fade } from "react-awesome-reveal"
 
 
 
 export const Menu = () => {
     return(
         <StyledUl>
-            <li><StyledA href="">home</StyledA></li>
-            <li><StyledA href="">works</StyledA></li>
-            <li><StyledA href="">about-me</StyledA></li>
-            <li><StyledA href="">contacts</StyledA></li>
+            <Fade direction="down">
+                <li><StyledA href="">home</StyledA></li>
+                <li><StyledA href="">works</StyledA></li>
+                <li><StyledA href="">about-me</StyledA></li>
+                <li><StyledA href="">contacts</StyledA></li>
+            </Fade>
+            
         </StyledUl>
     )
 }

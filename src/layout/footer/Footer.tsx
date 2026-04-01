@@ -4,6 +4,7 @@ import { Container } from "../../components/wrapper/Container"
 import { Logo } from "../../components/logo/Logo"
 import { ContactIcons } from "../../components/icons/ContactIcons"
 import { theme } from "../../styles/Themes"
+import { Fade } from "react-awesome-reveal"
 
 export const Footer = () => {
     return(
@@ -11,19 +12,27 @@ export const Footer = () => {
             <Container>
                 <FlexWrapper direction="column" $gap="50px">
                     <FlexWrapper $justify="space-between" $wrap="wrap" $gap="15px">
-                        <div>
-                            <FlexWrapper $align="center">
-                                <Logo />
-                                <a>ambrosov413@gmail.com</a>
+                        <Fade direction="left">
+                            <div>
+                                <FlexWrapper $align="center">
+                                    <Logo />
+                                    <a>ambrosov413@gmail.com</a>
+                                </FlexWrapper>
+                                <StyledP>Web designer and front-end developer</StyledP>
+                            </div>
+                        </Fade>
+                        
+                        <Fade direction="right">
+                            <FlexWrapper direction="column" $align="flex-start" $gap="10px">
+                                <StyledSpan>Media</StyledSpan>
+                                <ContactIcons $gap="10px"/>
                             </FlexWrapper>
-                            <StyledP>Web designer and front-end developer</StyledP>
-                        </div>
-                        <FlexWrapper direction="column" $align="flex-start" $gap="10px">
-                            <StyledSpan>Media</StyledSpan>
-                            <ContactIcons $gap="10px"/>
-                        </FlexWrapper>
+                        </Fade>
+                        
                     </FlexWrapper>
-                    <StyledSmall>© Copyright 2022. Made by Elias</StyledSmall>
+                    <Fade direction="up">
+                        <StyledSmall>© Copyright 2022. Made by Elias</StyledSmall>
+                    </Fade>
                 </FlexWrapper>
             </Container>
         </StyledFooter>
