@@ -20,11 +20,13 @@ export const StyledButton = styled.button<ButtonsProps>`
     padding: 8px 16px;
     background-color:${props => props.backgraund || "transparent"};
     max-width: ${props => props.width || "none"};
-    transition: background-color 0.2s linear;
+    transition: all 0.2s linear;
     animation: ${pinkLight} 2s ease-in-out infinite ;
 
     &:hover{
         background: rgba(199, 120, 221, 0.2);
+        animation: none;
+        transform: scale(1.1);
     }
 
     ${props=>props.$dark && css<ButtonsProps>`

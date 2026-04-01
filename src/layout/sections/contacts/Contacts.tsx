@@ -17,7 +17,7 @@ export const Contacts = () => {
                     </StyledP>
                     <MessageMe>
                         <StyledH3>Massege me here</StyledH3>
-                        <a href="">
+                        <a href="https://t.me/VladislavElmirovich" target="_blank" rel="noopener noreferrer">
                             <FlexWrapper $justify="center" $align="center" $gap="5px">
                                 <Icon iconId="tg" viewbox="2,1,23,23"/>@VladislavElmirovich
                             </FlexWrapper>

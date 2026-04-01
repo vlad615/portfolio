@@ -23,7 +23,7 @@ export const Main = () => {
                             <S.StyledSpan> front-end developer</S.StyledSpan>
                         </H1>
                         <S.StyledP>He crafts responsive websites where technologies meet creativity</S.StyledP>
-                        <StyledButton as="a" width="150px">Contact me!!</StyledButton>
+                        <StyledButton as="a" >Contact me!!</StyledButton>
                     </TextWrapper>
                     <S.ImgWrapper>
                         <S.Photo src={me} alt="Web Developer" />

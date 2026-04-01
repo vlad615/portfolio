@@ -13,9 +13,21 @@ type ContactIconsProps = {
 export const ContactIcons = (props: ContactIconsProps) =>{
     return(
         <StyledUl direction={props.direction}>
-            <li><a href=""><Icon iconId="tg"  width={props.width || "32"} height={props.height || "32"} viewbox={props.viewbox || "1, 0, 23, 23"}/></a></li>
-            <li><a href=""><Icon iconId="git" width={props.width || "32"} height={props.height || "32"} viewbox={props.viewbox || "-2, -2, 24, 24"}/></a></li>
-            <li><a href=""><Icon iconId="vk" width={props.width || "32"} height={props.height || "32"} viewbox={props.viewbox || "-1.5, -1, 23, 23"}/></a></li>
+            <li>
+                <a href="https://t.me/VladislavElmirovich" target="_blank" rel="noopener noreferrer">
+                    <Icon iconId="tg"  width={props.width || "32"} height={props.height || "32"} viewbox={props.viewbox || "1, 0, 23, 23"}/>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/vlad615" target="_blank" rel="noopener noreferrer">
+                    <Icon iconId="git" width={props.width || "32"} height={props.height || "32"} viewbox={props.viewbox || "-2, -2, 24, 24"}/>
+                </a>
+            </li>
+            <li>
+                <a href="https://vk.com/id1079683739" target="_blank" rel="noopener noreferrer">
+                    <Icon iconId="vk" width={props.width || "32"} height={props.height || "32"} viewbox={props.viewbox || "-1.5, -1, 23, 23"}/>
+                </a>
+            </li>
         </StyledUl>
     )
 }
