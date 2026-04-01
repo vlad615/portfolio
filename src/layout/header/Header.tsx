@@ -6,6 +6,7 @@ import { Container } from "../../components/wrapper/Container";
 import { theme } from "../../styles/Themes";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 
 export const Header = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
@@ -19,7 +20,9 @@ export const Header = () => {
         <StyledHeader>
             <Container>
                 <FlexWrapper $justify="space-between" $align="center">
-                    <Logo />
+                    <Fade direction="down">
+                        <Logo />
+                    </Fade>
                     <FlexWrapper $gap="30px">
                         {width <= breakpoint ? <MobileMenu />
                                             : <DesktopMenu />}

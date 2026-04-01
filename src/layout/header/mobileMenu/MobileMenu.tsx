@@ -22,18 +22,13 @@ export const MobileMenu = () =>{
                 <span></span>
             </BurgerButton>
             <MobileMenuPopup $isOpen={isMenuOpen}>
-                
                     <Logo />
                     <Menu />
                     <Fade direction="down">
                         <StyledButton as="a" fontSize="24px" $border="3px solid">Contact me!!</StyledButton>
                         <Languages fontSize="32px"/>
                     </Fade>
-                    
-                
                     <ContactIcons width="64" height="64"/>
-                
-                
             </MobileMenuPopup>
         </StyledMenu>
     )
