@@ -39,17 +39,17 @@ const CardWrapper = styled.article`
     min-width: 240px;
     border: solid 1px ${theme.color.font};
     transition: transform 0.3s linear;
+    flex: 1 1 0%;
+    
     @media screen and (min-width: 769px){
         &:hover{
             transform: scale(1.05) translateY(-15px);
         }
     }
 
-
     @media ${theme.media.tablet}{
-        flex: 1 1 0%;
         max-width: unset;
-}
+    }
 `
 const ViewButton = styled.a`
     opacity: 0;

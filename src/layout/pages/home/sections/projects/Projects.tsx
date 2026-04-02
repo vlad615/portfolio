@@ -15,16 +15,14 @@ export const Pojects = () => {
     return(
         <Section>
             <Container>
-                <TitleWrapper>
-                    <Fade direction="left">
-                        <SectionTitle $afterWidth="510px">projects</SectionTitle>
-                    </Fade>
-                    <Fade direction="right">
-                        <StyledLink to="/projects">View all ⇝</StyledLink>
-                    </Fade>
-                    
-                </TitleWrapper>
                 <Fade>
+                    <TitleWrapper>
+                        <SectionTitle $afterWidth="510px">projects</SectionTitle>
+                        <StyledLink to="/projects">View all ⇝</StyledLink>                  
+                    </TitleWrapper>
+                </Fade>
+                
+                <Fade direction="up">
                     <Wrapper>
                         <ProjectCard img={protect} tools={["React", "Express", "Node.js", "HTML", "SCSS", "Python", "FLask"]} title="ProtectX" description="Discord anti-crash bot"/>
                         <ProjectCard img={kahoot} tools={["Express", "Node.js", "CSS"]} title="Kahoot Answers Viewer" description="Get answers to your kahoot quiz"/>
@@ -83,11 +81,6 @@ const StyledLink = styled(Link)`
     font-size: 16px;
     color: ${theme.color.hoverFont};
     transition: transform 0.3s linear;
-    overflow: hidden;
-    
-    &:hover{
-        transform: translateX(-5px)
-    }
 
     &::after{
         content: "";
@@ -96,11 +89,14 @@ const StyledLink = styled(Link)`
         height: 1px;
         background-color: ${theme.color.hoverFont};
         bottom: 0;
-        right: 100%;
+        right: 50%;
         opacity: 0;
         transition: all 0.3s linear;
     }
 
+    &:hover{
+        transform: translateX(-5px);
+    }
     &:hover::after{
         opacity: 1;
         right: 0;
