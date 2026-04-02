@@ -1,10 +1,10 @@
 import styled from "styled-components"
-import { FlexWrapper } from "../../../components/wrapper/FlexWrapper"
-import { Icon } from "../../../components/icons/Icon"
-import { SectionTitle } from "../../../components/title/SectionTitle"
-import { theme } from "../../../styles/Themes"
-import { Container } from "../../../components/wrapper/Container"
-import { light } from "../../../styles/animations"
+import { FlexWrapper } from "../../../../../components/wrapper/FlexWrapper"
+import { Icon } from "../../../../../components/icons/Icon"
+import { SectionTitle } from "../../../../../components/title/SectionTitle"
+import { theme } from "../../../../../styles/Themes"
+import { Container } from "../../../../../components/wrapper/Container"
+import { light } from "../../../../../styles/animations"
 import { Fade } from "react-awesome-reveal"
 
 export const Contacts = () => {

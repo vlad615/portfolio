@@ -1,17 +1,17 @@
 import styled from "styled-components"
 import { theme } from "../../../styles/Themes"
 import { Fade } from "react-awesome-reveal"
-
+import { Link } from 'react-router-dom';
 
 
 export const Menu = () => {
     return(
         <StyledUl>
             <Fade direction="down">
-                <li><StyledA href="">home</StyledA></li>
-                <li><StyledA href="">works</StyledA></li>
-                <li><StyledA href="">about-me</StyledA></li>
-                <li><StyledA href="">contacts</StyledA></li>
+                <li><StyledA to="/">home</StyledA></li>
+                <li><StyledA to="/projects">works</StyledA></li>
+                <li><StyledA to="/about-me">about-me</StyledA></li>
+                <li><StyledA to="/contacts">contacts</StyledA></li>
             </Fade>
             
         </StyledUl>
@@ -23,7 +23,7 @@ const StyledUl = styled.ul`
     font-size: 32px;     
 `
 
-const StyledA = styled.a`
+const StyledA = styled(Link)`
     color: ${theme.color.font}; 
     transition: color 0.2s linear;
 

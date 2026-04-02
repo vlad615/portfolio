@@ -1,6 +1,6 @@
 import { styled } from "styled-components"
-import { theme } from "../../../styles/Themes"
-import { font } from "../../../styles/Commun"
+import { theme } from "../../../../../styles/Themes"
+import { font } from "../../../../../styles/Commun"
 import Typewriter from 'typewriter-effect';
 
 

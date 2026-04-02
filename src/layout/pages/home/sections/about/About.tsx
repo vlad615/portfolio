@@ -1,11 +1,11 @@
-import { FlexWrapper } from "../../../components/wrapper/FlexWrapper"
-import { SectionTitle } from "../../../components/title/SectionTitle"
-import { StyledButton } from "../../../components/Buttons"
+import { FlexWrapper } from "../../../../../components/wrapper/FlexWrapper"
+import { SectionTitle } from "../../../../../components/title/SectionTitle"
+import { StyledButton } from "../../../../../components/Buttons"
 import styled from "styled-components"
-import bg from "../../../accets/man.png"
-import { Container } from "../../../components/wrapper/Container"
-import { theme } from "../../../styles/Themes"
-import { light } from "../../../styles/animations"
+import bg from "../../../../../accets/man.png"
+import { Container } from "../../../../../components/wrapper/Container"
+import { theme } from "../../../../../styles/Themes"
+import { light } from "../../../../../styles/animations"
 import { Fade } from "react-awesome-reveal"
 
 type AboutProps = {

@@ -1,5 +1,5 @@
 import { styled } from "styled-components"
-import { theme } from "../../../styles/Themes"
+import { theme } from "../../../../../styles/Themes"
 
 const StyledSpan = styled.span`
     background-image: linear-gradient(90deg, ${theme.color.accent} 55%, ${theme.color.secondAccent} 100%);

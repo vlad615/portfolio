@@ -1,7 +1,7 @@
 import { styled } from "styled-components"
-import { FlexWrapper } from "../../../components/wrapper/FlexWrapper"
-import { StyledButton } from "../../../components/Buttons"
-import { theme } from "../../../styles/Themes";
+import { FlexWrapper } from "../wrapper/FlexWrapper"
+import { StyledButton } from "../Buttons"
+import { theme } from "../../styles/Themes";
 
 type ProjectCardProps = {
     img: string;

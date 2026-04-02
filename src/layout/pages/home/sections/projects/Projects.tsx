@@ -1,13 +1,14 @@
-import { ProjectCard } from "./ProjectCard"
-import { SectionTitle } from "../../../components/title/SectionTitle"
-import protect from "../../../accets/projects/Protect.jpg"
-import kahoot from "../../../accets/projects/Kahoot.jpg"
-import Chert from "../../../accets/projects/ChertNodes.png"
+import { ProjectCard } from "../../../../../components/cards/ProjectCard"
+import { SectionTitle } from "../../../../../components/title/SectionTitle"
+import protect from "../../../../../accets/projects/Protect.jpg"
+import kahoot from "../../../../../accets/projects/Kahoot.jpg"
+import Chert from "../../../../../accets/projects/ChertNodes.png"
 import { styled } from "styled-components"
-import { Container } from "../../../components/wrapper/Container"
-import { theme } from "../../../styles/Themes"
-import { light } from "../../../styles/animations"
+import { Container } from "../../../../../components/wrapper/Container"
+import { theme } from "../../../../../styles/Themes"
+import { light } from "../../../../../styles/animations"
 import { Fade } from "react-awesome-reveal"
+import { Link } from 'react-router-dom';
 
 
 export const Pojects = () => {
@@ -19,7 +20,7 @@ export const Pojects = () => {
                         <SectionTitle $afterWidth="510px">projects</SectionTitle>
                     </Fade>
                     <Fade direction="right">
-                        <Link href="">View all ⇝</Link>
+                        <StyledLink to="/projects">View all ⇝</StyledLink>
                     </Fade>
                     
                 </TitleWrapper>
@@ -76,7 +77,7 @@ const Wrapper = styled.div`
     }
 `
 
-const Link = styled.a`
+const StyledLink = styled(Link)`
     position: relative;
     font-weight: 500;
     font-size: 16px;

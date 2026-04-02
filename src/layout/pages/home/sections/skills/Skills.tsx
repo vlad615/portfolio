@@ -1,10 +1,10 @@
-import { FlexWrapper } from "../../../components/wrapper/FlexWrapper"
-import { SectionTitle } from "../../../components/title/SectionTitle"
-import { SkillsCard } from "./SkillsCard"
+import { FlexWrapper } from "../../../../../components/wrapper/FlexWrapper"
+import { SectionTitle } from "../../../../../components/title/SectionTitle"
+import { SkillsCard } from "../../../../../components/cards/SkillsCard"
 import { styled } from "styled-components"
-import right from "../../../accets/fiveelements.png"
-import { Container } from "../../../components/wrapper/Container"
-import { theme } from "../../../styles/Themes"
+import right from "../../../../../accets/fiveelements.png"
+import { Container } from "../../../../../components/wrapper/Container"
+import { theme } from "../../../../../styles/Themes"
 import { Fade } from "react-awesome-reveal"
 
 export const Skills = () => {

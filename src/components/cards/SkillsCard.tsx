@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "../../../styles/Themes";
+import { theme } from "../../styles/Themes";
 
 type SkillsCardProps = {
     group: string;

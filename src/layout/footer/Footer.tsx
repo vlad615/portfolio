@@ -18,7 +18,7 @@ export const Footer = () => {
                                     <Logo />
                                     <a>ambrosov413@gmail.com</a>
                                 </FlexWrapper>
-                                <StyledP>Web designer and front-end developer</StyledP>
+                                <StyledTitle>Back-end developer and front-end developer</StyledTitle>
                             </div>
                         </Fade>
                         
@@ -50,7 +50,7 @@ const StyledSmall = styled.small`
     font-size: 16px;
 `
 
-const StyledP = styled.h1`
+const StyledTitle = styled.h1`
     margin-top: 15px;
     text-align: start;
     font-weight: 400;
