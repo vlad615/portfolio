@@ -8,6 +8,7 @@ type ButtonsProps = {
     $dark?: boolean | null;
     $border?: string;
     backgraund?: string;
+    $mrg?: string;
 }
 
 export const StyledButton = styled.button<ButtonsProps>`
@@ -21,6 +22,7 @@ export const StyledButton = styled.button<ButtonsProps>`
     background-color:${props => props.backgraund || "transparent"};
     max-width: ${props => props.width || "none"};
     transition: all 0.2s linear;
+    margin: ${props => props.$mrg|| "none"};
     animation: ${pinkLight} 2s ease-in-out infinite ;
 
     &:hover{

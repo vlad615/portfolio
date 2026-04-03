@@ -25,13 +25,12 @@ export const Skills = () => {
                 <Fade direction="right">
                     <SkillsWrapper>
                         <SkillsCard group="Tools" values={["VSCode", "Linux", "Git", "Figma", "VSCode", "Linux", "Git", "GitLab CI/CD"]}/>
-                        <SkillsCard group="Languages" values={["TypeScript", "JavaScript", "Python"]}/>
-                        <SkillsCard group="Databases" values={["PostgreSQL", "SQLite", "SQL"]}/>
                         <SkillsCard group="Other" values={["HTML", "CSS", "Rest", "Jinja", "SCSS"]}/>
+                        <SkillsCard group="Databases" values={["PostgreSQL", "SQLite", "SQL"]}/>
                         <SkillsCard group="Frameworks" values={["React", "FastAPI", "Django"]}/>
+                        <SkillsCard group="Languages" values={["TypeScript", "JavaScript", "Python"]}/>
                     </SkillsWrapper>
                 </Fade>
-                
             </FlexWrapper>
         </Container>
     </Section>
@@ -52,7 +51,7 @@ const Section = styled.section`
 
 const SkillsWrapper = styled.div`
     display: flex;
-    max-height: 300px;
+    max-height: 280px;
     gap: 15px;
     flex-direction: column;
     flex-wrap: wrap-reverse;

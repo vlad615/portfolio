@@ -18,7 +18,7 @@ export const CompleteApps = () => {
                 <SectionTitle $weigth={600} $before="/" $mgb="15px">projects</SectionTitle>
                 <StyledP>List of my projects</StyledP>
                 <SectionTitle $mgb="50px">complete-app</SectionTitle>
-                <FlexWrapper $gap="15px" $wrap="wrap" $justify="space-between">
+                <FlexWrapper $gap="15px" $wrap="wrap" $justify="space-between" $align="flex-start">
                     <ProjectCard img={protect} tools={["React", "Express", "Node.js", "HTML", "SCSS", "Python", "FLask"]} title="ProtectX" description="Discord anti-crash bot"/>
                     <ProjectCard img={kahoot} tools={["Express", "Node.js", "CSS"]} title="Kahoot Answers Viewer" description="Get answers to your kahoot quiz"/>
                     <ProjectCard img={Chert} tools={["HTML", "Python", "FLask"]} title="ChertNodes" description="Minecraft servers hosting"/>
@@ -42,6 +42,8 @@ const Section = styled.section`
         width: 110px;
         height: 50px;
         top: 30%;
+        right: 50%;
+        transform: translateX(-600px);
     }
 
     &::after{
@@ -52,7 +54,7 @@ const Section = styled.section`
         border: 1px solid ${theme.color.font};
         right: 50%;
         top: 13%;
-        transform: translateX(820px);
+        transform: translateX(750px);
         animation: ${light} 2s ease-in-out infinite;
     }
 
