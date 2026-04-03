@@ -7,6 +7,7 @@ import kahoot from "../../../../accets/projects/Kahoot.jpg"
 import Chert from "../../../../accets/projects/ChertNodes.png"
 import { ProjectCard } from "../../../../components/cards/ProjectCard"
 import { theme } from "../../../../styles/Themes"
+import { light } from "../../../../styles/animations"
 
 
 
@@ -14,7 +15,7 @@ export const CompleteApps = () => {
     return(
         <Section>
             <Container>
-                <SectionTitle weigth={600} before="/" $mgb="15px">projects</SectionTitle>
+                <SectionTitle $weigth={600} $before="/" $mgb="15px">projects</SectionTitle>
                 <StyledP>List of my projects</StyledP>
                 <SectionTitle $mgb="50px">complete-app</SectionTitle>
                 <FlexWrapper $gap="15px" $wrap="wrap" $justify="space-between">
@@ -30,6 +31,31 @@ export const CompleteApps = () => {
 
 const Section = styled.section`
     margin: 100px 0 80px;
+    position: relative;
+    overflow: hidden;
+
+    &::before{
+        content: "";
+        position: absolute;
+        background-image: url('/elements/Dots.svg');
+        background-repeat: no-repeat;
+        width: 110px;
+        height: 50px;
+        top: 30%;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 155px;
+        height: 155px;
+        border: 1px solid ${theme.color.font};
+        right: 50%;
+        top: 13%;
+        transform: translateX(820px);
+        animation: ${light} 2s ease-in-out infinite;
+    }
+
 `
 
 const StyledP = styled.p`

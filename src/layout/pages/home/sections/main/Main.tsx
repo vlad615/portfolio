@@ -1,21 +1,19 @@
 import styled from "styled-components"
 import { theme } from "../../../../../styles/Themes"
 import { Container } from "../../../../../components/wrapper/Container"
-import { ContactIcons } from "../../../../../components/icons/ContactIcons"
 import { H1 } from "../../../../../components/title/H1"
 import frame from "../../../../../accets/Abstract.png"
 import me from "../../../../../accets/me.webp"
 import { StyledButton } from "../../../../../components/Buttons"
 import { S } from "./StylesMain"
 import { Testimony } from "./Testimony"
-import { pinkLight, light } from "../../../../../styles/animations"
+import { light } from "../../../../../styles/animations"
 import { Fade } from "react-awesome-reveal"
 
 
 export const Main = () => {
     return (
         <Section>
-            <ContactWrapper><ContactIcons direction="column" /></ContactWrapper> 
             
             <Container>
                 <Wrapper>
@@ -45,8 +43,8 @@ export const Main = () => {
 
 const Section = styled.section`
     margin: 90px 0 75px;
-    position: relative;
     overflow: hidden;
+    position: relative;
 
 
     &::after{
@@ -58,33 +56,9 @@ const Section = styled.section`
         right: 50%;
         bottom: 10%;
         transform: translateX(690px);
-        animation: ${light} 2s ease-in-out infinite ;
-
+        animation: ${light} 2s ease-in-out infinite;
     }
     
-`
-
-const ContactWrapper = styled.div`
-    position: fixed;
-    left: 50%;
-    top: 200px;
-    transform: translateX(-580px);
-    z-index: 96;
-
-    &::before{
-        content: "";
-        position: absolute;
-        background-color: ${theme.color.font};
-        width: 1px;
-        height: 195px;
-        top: -210px;
-        right: 50%;
-        animation: ${pinkLight} 2s ease-in-out infinite;
-    }
-    
-    @media screen and (max-width: 1180px){
-        display: none;
-    }
 `
 
 const Wrapper = styled.div`
