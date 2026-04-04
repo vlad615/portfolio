@@ -11,7 +11,7 @@ export type AboutProps = {
 
 export const AboutMe = ({text}: AboutProps) => {
     return(
-        <FlexWrapper $justify="space-between" $align="flex-start" $gap="30px">
+        <FlexWrapper $justify="space-between" $align="center" $gap="30px">
             <Fade direction="left">
                 <TextWrapper >
                     <StyledP>{text}</StyledP>

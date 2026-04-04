@@ -10,7 +10,7 @@ export const Menu = (props: { setIsMenuopen: (arg0: boolean) => void; }) => {
             <Fade direction="down">
                 <li><StyledA to="/">home</StyledA></li>
                 <li><StyledA to="/projects">works</StyledA></li>
-                <li><StyledA to="/about-me">about-me</StyledA></li>
+                <li><StyledA to="/about">about-me</StyledA></li>
                 <li><StyledA to="/contacts">contacts</StyledA></li>
             </Fade>
             

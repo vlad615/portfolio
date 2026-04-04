@@ -9,6 +9,7 @@ import bot from "../../../../accets/projects/bot.jpg"
 import { ProjectCard } from "../../../../components/cards/ProjectCard"
 import { theme } from "../../../../styles/Themes"
 import { light } from "../../../../styles/animations"
+import { PagesTitle } from "../../../../components/title/PagesTitle"
 
 
 
@@ -16,8 +17,8 @@ export const CompleteApps = () => {
     return(
         <Section>
             <Container>
-                <SectionTitle $weigth={600} $before="/" $mgb="15px">projects</SectionTitle>
-                <StyledP>List of my projects</StyledP>
+                <PagesTitle title="projects" text="List of my projects" $mgb="70px"/>
+                
                 <SectionTitle $mgb="50px">complete-app</SectionTitle>
                 <FlexWrapper $gap="15px" $wrap="wrap" $justify="space-between" $align="flex-start">
                     <ProjectCard img={protect} tools={["React", "Express", "Node.js", "HTML", "SCSS", "Python", "FLask"]} title="ProtectX" description="Discord anti-crash bot"/>
@@ -59,10 +60,4 @@ const Section = styled.section`
         animation: ${light} 2s ease-in-out infinite;
     }
 
-`
-
-const StyledP = styled.p`
-    font-size: 16px;
-    color: ${theme.color.hoverFont};
-    margin-bottom: 70px;
 `
