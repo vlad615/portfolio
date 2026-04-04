@@ -53,13 +53,6 @@ const StyledP = styled.p`
     margin: 0 15px;
 `
 
-const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin: 15px;
-`
-
 const Title = styled.h3`
     font-weight: 500;
     font-size: 24px;

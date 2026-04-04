@@ -1,16 +1,12 @@
 import { FlexWrapper } from "../../../../../components/wrapper/FlexWrapper"
 import { SectionTitle } from "../../../../../components/title/SectionTitle"
-import { StyledButton } from "../../../../../components/Buttons"
 import styled from "styled-components"
-import bg from "../../../../../accets/man.png"
 import { Container } from "../../../../../components/wrapper/Container"
 import { theme } from "../../../../../styles/Themes"
 import { light } from "../../../../../styles/animations"
 import { Fade } from "react-awesome-reveal"
+import { AboutMe, AboutProps } from "../../../../aboutMe/AboutMe"
 
-type AboutProps = {
-    text: string;
-}
 
 export const About = (props: AboutProps) =>{
     return(
@@ -19,19 +15,7 @@ export const About = (props: AboutProps) =>{
                 <Fade>
                     <SectionTitle $afterWidth="330px" $mgb="20px">about-me</SectionTitle>
                 </Fade>
-                
-                <FlexWrapper $justify="space-between" $align="flex-start" $gap="30px">
-                    <Fade direction="left">
-                        <TextWrapper >
-                            <StyledP>{props.text}</StyledP>
-                            <StyledButton as="a">Read more →</StyledButton>
-                        </TextWrapper>
-                    </Fade>
-                    <Fade direction="right">
-                        <StyledImg src={bg}/>
-                    </Fade>
-                    
-                </FlexWrapper>
+                <AboutMe {...props}/>
             </Container>
         </Section>
     )
@@ -78,36 +62,3 @@ const Section = styled.section`
     }
 `
 
-const TextWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: flex-start;
-    max-width: 515px;
-
-    @media ${theme.media.tablet}{
-        max-width: unset;
-    }
-`
-
-const StyledP = styled.p`
-    white-space: pre-wrap;
-`
-
-// const ImgWrapper = styled.div`
-//     max-width: 340px;
-//     min-width: 280px;
-//     @media ${theme.media.tablet}{
-//         max-width: 280px;
-//     }
-// `
-
-const StyledImg = styled.img`
-    width: 100%;
-        max-width: 340px;
-    min-width: 280px;
-    @media ${theme.media.tablet}{
-        max-width: 280px;
-    }
-    z-index: 0;
-`

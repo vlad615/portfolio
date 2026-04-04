@@ -5,6 +5,7 @@ import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
 import protect from "../../../../accets/projects/Protect.jpg"
 import kahoot from "../../../../accets/projects/Kahoot.jpg"
 import Chert from "../../../../accets/projects/ChertNodes.png"
+import bot from "../../../../accets/projects/bot.jpg"
 import { ProjectCard } from "../../../../components/cards/ProjectCard"
 import { theme } from "../../../../styles/Themes"
 import { light } from "../../../../styles/animations"
@@ -22,7 +23,7 @@ export const CompleteApps = () => {
                     <ProjectCard img={protect} tools={["React", "Express", "Node.js", "HTML", "SCSS", "Python", "FLask"]} title="ProtectX" description="Discord anti-crash bot"/>
                     <ProjectCard img={kahoot} tools={["Express", "Node.js", "CSS"]} title="Kahoot Answers Viewer" description="Get answers to your kahoot quiz"/>
                     <ProjectCard img={Chert} tools={["HTML", "Python", "FLask"]} title="ChertNodes" description="Minecraft servers hosting"/>
-                    <ProjectCard img={Chert} tools={["HTML", "Css", "JS"]} title="Kotik Bot" description="Multi-functional discord bot"/>
+                    <ProjectCard img={bot} tools={["HTML", "Css", "JS"]} title="Kotik Bot" description="Multi-functional discord bot"/>
                 </FlexWrapper>
             </Container>
         </Section>
@@ -30,7 +31,7 @@ export const CompleteApps = () => {
 }
 
 const Section = styled.section`
-    margin: 100px 0 80px;
+    margin-top: 100px;
     position: relative;
     overflow: hidden;
 
