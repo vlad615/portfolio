@@ -4,6 +4,8 @@ import { PagesTitle } from "../../../../components/title/PagesTitle"
 import { AboutMe, AboutProps } from "../../../aboutMe/AboutMe"
 import { theme } from "../../../../styles/Themes"
 import { light } from "../../../../styles/animations"
+import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
+
 
 export const AboutSection = (props: AboutProps) => {
     return (
@@ -44,5 +46,12 @@ const Section = styled.div`
         top: 20%;
         transform: translateX(750px);
         animation: ${light} 2s ease-in-out infinite;
+    }
+
+    @media ${theme.media.tablet}{
+        ${FlexWrapper}{
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+        }
     }
 `

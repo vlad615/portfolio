@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { Container } from "../../../../components/wrapper/Container"
 import { light } from "../../../../styles/animations"
-import { theme } from "../../../../styles/Themes"
 import { SectionTitle } from "../../../../components/title/SectionTitle"
 import { SkillsCard } from "../../../../components/cards/SkillsCard"
 
@@ -24,7 +23,7 @@ export const SkillSection = () => {
 } 
 
 const Section = styled.div`
-    margin: 100px 0;
+    margin: 100px 0 0;
     position: relative;
     overflow: hidden;
 

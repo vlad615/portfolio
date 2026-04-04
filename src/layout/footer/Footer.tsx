@@ -18,7 +18,7 @@ export const Footer = () => {
                                     <Logo />
                                     <a>ambrosov413@gmail.com</a>
                                 </FlexWrapper>
-                                <StyledTitle>Back-end developer and front-end developer</StyledTitle>
+                                <StyledTitle>Backend developer and front-end developer</StyledTitle>
                             </div>
                         </Fade>
                         
