@@ -14,7 +14,7 @@ export const Facts = () =>{
                 <Fact>I often play tenis with my friend</Fact>
                 <Fact>My favorite movie is The pursuit of happyness</Fact>
                 <Fact>I like <span>chess</span></Fact>
-                <Fact>My play the <span>guitar</span></Fact>
+                <Fact>I play the <span>guitar</span></Fact>
                 <Fact>I don't like video games</Fact>
             </FactsWrapper>
         </Container>

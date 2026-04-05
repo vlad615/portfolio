@@ -4,9 +4,9 @@ import { Fade } from "react-awesome-reveal"
 import { Link } from 'react-router-dom';
 
 
-export const Menu = (props: { setIsMenuopen: (arg0: boolean) => void; }) => {
+export const Menu: React.FC<{ changeMenuOpen: () => void }> = (props: {changeMenuOpen?: () => void} ) => {
     return(
-        <StyledUl onClick={()=>{props.setIsMenuopen(false) }}>
+        <StyledUl onClick={props.changeMenuOpen}>
             <Fade direction="down">
                 <li><StyledA to="/">home</StyledA></li>
                 <li><StyledA to="/projects">works</StyledA></li>

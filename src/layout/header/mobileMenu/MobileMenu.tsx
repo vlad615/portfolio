@@ -24,7 +24,7 @@ export const MobileMenu = () =>{
             <MobileMenuPopup $isOpen={isMenuOpen}>
                     <Logo />
 
-                    <Menu setIsMenuopen={setIsMenuopen}/>
+                    <Menu changeMenuOpen={changeMenuOpen}/>
                     <Fade direction="down">
                         <StyledButton as="a" fontSize="24px" $border="3px solid">Contact me!!</StyledButton>
                         <Languages fontSize="32px"/>
