@@ -18,7 +18,7 @@ export const StyledButton = styled.button<ButtonsProps>`
     color: #fff;
     border: ${ props => props.$border || `1px solid ${theme.color.accent}`};
     border-color: ${theme.color.accent};
-    padding: 8px 16px;
+    padding: 8px 10px;
     background-color:${props => props.backgraund || "transparent"};
     max-width: ${props => props.width || "none"};
     transition: all 0.2s linear;

@@ -5,6 +5,7 @@ import { Footer } from './layout/footer/Footer';
 import { Projects } from './layout/pages/projects/Projects';
 import { AsideContacts } from './layout/aside/AsideContacts';
 import { About } from './layout/pages/about/About';
+import { Contacts } from './layout/pages/contacts/Contacts';
 
 function App() {
     const aboutMeData = {
@@ -23,6 +24,7 @@ return (
                 <Route path='/' element={<Home {...aboutMeData}/>}/>
                 <Route path='/projects' element={<Projects/>}/>
                 <Route path='/about' element={<About {...aboutMeData}/>}/>
+                <Route path='/contacts' element={<Contacts />}/>
             </Routes>
         <Footer />
     </BrowserRouter>

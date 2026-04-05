@@ -21,7 +21,7 @@ export const Facts = () =>{
     </Section>
 }
 
-const Section = styled.div`
+const Section = styled.section`
     padding: 100px 0;
     position: relative;
     overflow: hidden;
@@ -62,7 +62,7 @@ const FactsWrapper = styled.div`
     &::before{
         content: "";
         position: absolute;
-        background-image: url("/public/elements/Group.png");
+        background-image: url("/elements/Group.png");
         background-repeat: no-repeat;
         width: 180px;
         height: 170px;

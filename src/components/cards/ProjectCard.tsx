@@ -20,7 +20,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
 const CardWrapper = styled.article`
     max-width: 330px;
-    min-width: 240px;
+    min-width: 245px;
     transition: transform 0.3s linear;
     flex: 1 1 0%;
     

@@ -18,7 +18,7 @@ export const AboutSection = (props: AboutProps) => {
     )
 } 
 
-const Section = styled.div`
+const Section = styled.section`
     margin: 100px 0;
     position: relative;
     overflow: hidden;
