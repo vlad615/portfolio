@@ -49,6 +49,7 @@ const Section = styled.section`
     }
 
     @media ${theme.media.tablet}{
+        margin: 80px 0 60px;
         ${FlexWrapper}{
             flex-wrap: wrap-reverse;
             justify-content: center;

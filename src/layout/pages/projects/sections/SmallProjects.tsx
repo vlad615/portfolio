@@ -12,7 +12,7 @@ export const SmallProjects = () => {
         <Section>
             <Container>
                 <TitleWrapper>
-                    <SectionTitle $mgb="50px">small-projects</SectionTitle>
+                    <SectionTitle $mgb="30px">small-projects</SectionTitle>
                 </TitleWrapper>
                 
                 <Fade direction="right">
@@ -63,6 +63,11 @@ const Section = styled.section`
         right: 50%;
         top: 18%;
         transform: translateX(700px);
+    }
+
+    @media ${theme.media.mobile}{
+        padding-top: 40px;
+        margin-bottom: 80px;
     }
 `
 

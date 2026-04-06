@@ -54,6 +54,10 @@ const Section = styled.section`
         transform: translateX(-600px);
         animation: ${light} 2s ease-in-out infinite;
     }
+
+    @media ${theme.media.mobile}{
+        padding: 50px 0;
+    }
 `
 
 const FactsWrapper = styled.div`

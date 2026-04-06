@@ -4,6 +4,7 @@ import { light } from "../../../../styles/animations"
 import { SectionTitle } from "../../../../components/title/SectionTitle"
 import { Icon } from "../../../../components/icons/Icon"
 import { Fade } from "react-awesome-reveal"
+import { theme } from "../../../../styles/Themes"
 
 
 export const AllMedia = () => {
@@ -43,5 +44,9 @@ const Section = styled.div`
         top: 0;
         transform: translateX(-600px);
         animation: ${light} 2s ease-in-out infinite;
+    }
+
+    @media ${theme.media.mobile}{
+        margin-bottom: 60px;
     }
 `

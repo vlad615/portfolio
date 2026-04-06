@@ -11,7 +11,7 @@ export const SkillSection = () => {
         <Section>
             <Container>
                 <Fade>
-                    <SectionTitle $mgb="50px">skills</SectionTitle>
+                    <SectionTitle $mgb="30px">skills</SectionTitle>
                 </Fade>
                 
                 <Fade>
@@ -30,7 +30,7 @@ export const SkillSection = () => {
 } 
 
 const Section = styled.section`
-    margin: 100px 0 0;
+    /* margin: 100px 0 0; */
     position: relative;
     overflow: hidden;
 

@@ -18,11 +18,10 @@ export const CompleteApps = () => {
     return(
         <Section>
             <Container>
-                <PagesTitle title="projects" text="List of my projects" $mgb="70px"/>
+                <PagesTitle title="projects" text="List of my projects" $mgb="50px"/>
                 <Fade direction="down">
-                    <SectionTitle $mgb="50px">complete-app</SectionTitle>
+                    <SectionTitle $mgb="30px">complete-app</SectionTitle>
                 </Fade>
-                
                 
                 <Fade>
                     <FlexWrapper $gap="15px" $wrap="wrap" $justify="space-between" $align="flex-start">
@@ -67,4 +66,7 @@ const Section = styled.section`
         animation: ${light} 2s ease-in-out infinite;
     }
 
+    @media ${theme.media.tablet}{
+        margin-top: 80px;
+    }
 `

@@ -11,7 +11,7 @@ export const ContactsSection = () => {
     return (
         <Section>
             <Container>
-                <PagesTitle title="contants" text="How to conect with me?" $mgb="45px"/>
+                <PagesTitle title="contants" text="How to conect with me?" $mgb="35px"/>
                 <ContactComponent />
             </Container>
         </Section>
@@ -36,6 +36,7 @@ const Section = styled.section`
     }
 
     @media ${theme.media.tablet}{
+        padding: 80px 0 40px;
         ${FlexWrapper}{
             flex-wrap: wrap;
         }

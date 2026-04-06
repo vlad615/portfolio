@@ -71,6 +71,12 @@ const MobileMenuPopup = styled.div<{$isOpen: boolean}>`
         align-items: flex-start;
         gap: 30px;
     `}    
+
+    @media ${theme.media.mobile}{
+        ul:nth-of-type(1){
+            margin-top: 10px;
+        }
+    }
 `
 
 const BurgerButton = styled.button<{$isOpen: boolean}>`
