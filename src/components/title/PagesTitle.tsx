@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { SectionTitle } from "./SectionTitle"
 import { theme } from "../../styles/Themes"
+import { Fade } from "react-awesome-reveal";
 
 type PagesTitleProps = {
     title: string;
@@ -10,10 +11,10 @@ type PagesTitleProps = {
 
 export const PagesTitle = (props: PagesTitleProps) => {
     return(
-        <>
+        <Fade direction="down">
             <SectionTitle $weigth={600} $before="/" $mgb="15px">{props.title}</SectionTitle>
             <StyledP $mgb={props.$mgb}>{props.text}</StyledP>
-        </>
+        </Fade>
     )
 }
 

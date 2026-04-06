@@ -3,20 +3,27 @@ import { Container } from "../../../../components/wrapper/Container"
 import { light } from "../../../../styles/animations"
 import { SectionTitle } from "../../../../components/title/SectionTitle"
 import { SkillsCard } from "../../../../components/cards/SkillsCard"
+import { Fade } from "react-awesome-reveal"
 
 
 export const SkillSection = () => {
     return (
         <Section>
             <Container>
-                <SectionTitle $mgb="50px">skills</SectionTitle>
-                <SkillsWrapper>
-                    <SkillsCard group="Tools" values={["VSCode", "Linux", "Git", "Figma", "VSCode", "Linux", "Git", "GitLab CI/CD"]}/>
-                    <SkillsCard group="Other" values={["HTML", "CSS", "Rest", "Jinja", "SCSS"]}/>
-                    <SkillsCard group="Databases" values={["PostgreSQL", "SQLite", "SQL"]}/>
-                    <SkillsCard group="Frameworks" values={["React", "FastAPI", "Django"]}/>
-                    <SkillsCard group="Languages" values={["TypeScript", "JavaScript", "Python"]}/>
-                </SkillsWrapper>
+                <Fade>
+                    <SectionTitle $mgb="50px">skills</SectionTitle>
+                </Fade>
+                
+                <Fade>
+                    <SkillsWrapper>
+                        <SkillsCard group="Tools" values={["VSCode", "Linux", "Git", "Figma", "VSCode", "Linux", "Git", "GitLab CI/CD"]}/>
+                        <SkillsCard group="Other" values={["HTML", "CSS", "Rest", "Jinja", "SCSS"]}/>
+                        <SkillsCard group="Databases" values={["PostgreSQL", "SQLite", "SQL"]}/>
+                        <SkillsCard group="Frameworks" values={["React", "FastAPI", "Django"]}/>
+                        <SkillsCard group="Languages" values={["TypeScript", "JavaScript", "Python"]}/>                    
+                    </SkillsWrapper>
+                </Fade>
+                
             </Container>
         </Section>
     )

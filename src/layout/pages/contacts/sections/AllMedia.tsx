@@ -3,14 +3,18 @@ import { Container } from "../../../../components/wrapper/Container"
 import { light } from "../../../../styles/animations"
 import { SectionTitle } from "../../../../components/title/SectionTitle"
 import { Icon } from "../../../../components/icons/Icon"
+import { Fade } from "react-awesome-reveal"
 
 
 export const AllMedia = () => {
     return (
         <Section>
             <Container>
-                <SectionTitle $mgb="20px">all-media</SectionTitle>
-
+                <Fade>
+                    <SectionTitle $mgb="20px">all-media</SectionTitle>
+                </Fade>
+                
+                
                 <a href="https://gitlab.com/vlad615" target="_blank" rel="noopener noreferrer">
                     <Icon iconId="gitlab" width="140" height="60" viewbox="0 0 990 380" />
                 </a>

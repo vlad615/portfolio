@@ -3,6 +3,7 @@ import { light } from "../../../../styles/animations"
 import { theme } from "../../../../styles/Themes"
 import { Container } from "../../../../components/wrapper/Container"
 import { SectionTitle } from "../../../../components/title/SectionTitle"
+import { Fade } from "react-awesome-reveal"
 
 
 export const Facts = () =>{
@@ -10,12 +11,15 @@ export const Facts = () =>{
         <Container>
             <SectionTitle $mgb="25px">my-facts</SectionTitle>
             <FactsWrapper>
-                <Fact>I don't like sushi</Fact>
-                <Fact>I often play tenis with my friend</Fact>
-                <Fact>My favorite movie is The pursuit of happyness</Fact>
-                <Fact>I like <span>chess</span></Fact>
-                <Fact>I play the <span>guitar</span></Fact>
-                <Fact>I don't like video games</Fact>
+                <Fade direction="up" cascade damping={0.1}>
+                    <Fact>I don't like sushi</Fact>
+                    <Fact>I often play tenis with my friend</Fact>
+                    <Fact>My favorite movie is The pursuit of happyness</Fact>
+                    <Fact>I like <span>chess</span></Fact>
+                    <Fact>I play the <span>guitar</span></Fact>
+                    <Fact>I don't like video games</Fact>
+                </Fade>
+                
             </FactsWrapper>
         </Container>
     </Section>

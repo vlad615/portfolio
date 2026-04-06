@@ -10,6 +10,7 @@ import { ProjectCard } from "../../../../components/cards/ProjectCard"
 import { theme } from "../../../../styles/Themes"
 import { light } from "../../../../styles/animations"
 import { PagesTitle } from "../../../../components/title/PagesTitle"
+import { Fade } from "react-awesome-reveal"
 
 
 
@@ -18,14 +19,20 @@ export const CompleteApps = () => {
         <Section>
             <Container>
                 <PagesTitle title="projects" text="List of my projects" $mgb="70px"/>
+                <Fade direction="down">
+                    <SectionTitle $mgb="50px">complete-app</SectionTitle>
+                </Fade>
                 
-                <SectionTitle $mgb="50px">complete-app</SectionTitle>
-                <FlexWrapper $gap="15px" $wrap="wrap" $justify="space-between" $align="flex-start">
-                    <ProjectCard img={protect} tools={["React", "Express", "Node.js", "HTML", "SCSS", "Python", "FLask"]} title="ProtectX" description="Discord anti-crash bot"/>
-                    <ProjectCard img={kahoot} tools={["Express", "Node.js", "CSS"]} title="Kahoot Answers Viewer" description="Get answers to your kahoot quiz"/>
-                    <ProjectCard img={Chert} tools={["HTML", "Python", "FLask"]} title="ChertNodes" description="Minecraft servers hosting"/>
-                    <ProjectCard img={bot} tools={["HTML", "Css", "JS"]} title="Kotik Bot" description="Multi-functional discord bot"/>
-                </FlexWrapper>
+                
+                <Fade>
+                    <FlexWrapper $gap="15px" $wrap="wrap" $justify="space-between" $align="flex-start">
+                        <ProjectCard img={protect} tools={["React", "Express", "Node.js", "HTML", "SCSS", "Python", "FLask"]} title="ProtectX" description="Discord anti-crash bot"/>
+                        <ProjectCard img={kahoot} tools={["Express", "Node.js", "CSS"]} title="Kahoot Answers Viewer" description="Get answers to your kahoot quiz"/>
+                        <ProjectCard img={Chert} tools={["HTML", "Python", "FLask"]} title="ChertNodes" description="Minecraft servers hosting"/>
+                        <ProjectCard img={bot} tools={["HTML", "Css", "JS"]} title="Kotik Bot" description="Multi-functional discord bot"/>
+                    </FlexWrapper>
+                </Fade>
+                
             </Container>
         </Section>
     )

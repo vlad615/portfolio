@@ -30,7 +30,7 @@ const ProjectWrapper = styled.div`
     gap: 15px;
 
     max-width: 330px;
-    min-width: 240px;
+    min-width: 245px;
     border: solid 1px ${theme.color.font};
     transition: transform 0.3s linear;
     flex: 1 1 0%;

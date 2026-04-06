@@ -31,7 +31,7 @@ export const Footer = () => {
                         
                     </FlexWrapper>
                     <Fade direction="up">
-                        <StyledSmall>© Copyright 2022. Made by Elias</StyledSmall>
+                        <StyledSmall>© Copyright 2026. Made by VAcod</StyledSmall>
                     </Fade>
                 </FlexWrapper>
             </Container>

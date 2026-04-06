@@ -4,6 +4,7 @@ import { SectionTitle } from "../../../../components/title/SectionTitle"
 import { FlexWrapper } from "../../../../components/wrapper/FlexWrapper"
 import { SmallPrjCard } from "../../../../components/cards/SmallPrjCard"
 import { theme } from "../../../../styles/Themes"
+import { Fade } from "react-awesome-reveal"
 
 
 export const SmallProjects = () => {
@@ -14,16 +15,19 @@ export const SmallProjects = () => {
                     <SectionTitle $mgb="50px">small-projects</SectionTitle>
                 </TitleWrapper>
                 
-                <FlexWrapper $wrap="wrap" $gap="15px">
-                    <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
-                    <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
-                    <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
-                    <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
-                    <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
-                    <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
-                    <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
-                    <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
-                </FlexWrapper>
+                <Fade direction="right">
+                    <FlexWrapper $wrap="wrap" $gap="15px">
+                        <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
+                        <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
+                        <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
+                        <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
+                        <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
+                        <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
+                        <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
+                        <SmallPrjCard tools={['HTML', 'CSS', 'JS']} title="Bot boilerplate" description="Start creating scalable discord.js bot with typescript in seconds" />
+                    </FlexWrapper>
+                </Fade>
+                
             </Container>
         </Section>
     )
@@ -62,7 +66,7 @@ const Section = styled.section`
     }
 `
 
-const TitleWrapper = styled.div`
+const TitleWrapper = styled(Fade)`
     &::before{
         content: "";
         position: absolute;

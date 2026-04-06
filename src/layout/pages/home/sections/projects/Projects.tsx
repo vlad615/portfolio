@@ -22,14 +22,13 @@ export const Pojects = () => {
                     </TitleWrapper>
                 </Fade>
                 
-                <Fade direction="up">
+                <Fade direction="right">
                     <Wrapper>
                         <ProjectCard img={protect} tools={["React", "Express", "Node.js", "HTML", "SCSS", "Python", "FLask"]} title="ProtectX" description="Discord anti-crash bot"/>
                         <ProjectCard img={kahoot} tools={["Express", "Node.js", "CSS"]} title="Kahoot Answers Viewer" description="Get answers to your kahoot quiz"/>
                         <ProjectCard img={Chert} tools={["HTML", "Python", "FLask"]} title="ChertNodes" description="Minecraft servers hosting"/>
                     </Wrapper>
                 </Fade>
-                
             </Container>
         </Section>
 
