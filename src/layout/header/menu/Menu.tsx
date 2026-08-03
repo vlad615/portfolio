@@ -4,8 +4,8 @@ import { Fade } from "react-awesome-reveal"
 import { Link } from 'react-router-dom';
 
 
-export const Menu: React.FC<{ changeMenuOpen: () => void }> = (props: {changeMenuOpen?: () => void} ) => {
-    return(
+export const Menu: React.FC<{ changeMenuOpen?: () => void }> = (props) => {
+    return (
         <StyledUl onClick={props.changeMenuOpen}>
             <Fade direction="down">
                 <li><StyledA to="/">home</StyledA></li>
@@ -13,7 +13,7 @@ export const Menu: React.FC<{ changeMenuOpen: () => void }> = (props: {changeMen
                 <li><StyledA to="/about">about-me</StyledA></li>
                 <li><StyledA to="/contacts">contacts</StyledA></li>
             </Fade>
-            
+
         </StyledUl>
     )
 }
