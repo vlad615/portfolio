@@ -17,14 +17,14 @@ Transforming my creativity and knowledge into a websites has been my passion for
     }
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/portfolio">
             <Header />
             <AsideContacts />
             <Routes>
-                <Route path='/portfolio/' element={<Home {...aboutMeData} />} />
-                <Route path='/portfolio/projects' element={<Projects />} />
-                <Route path='/portfolio/about' element={<About {...aboutMeData} />} />
-                <Route path='/portfolio/contacts' element={<Contacts />} />
+                <Route path='/' element={<Home {...aboutMeData} />} />
+                <Route path='/projects' element={<Projects />} />
+                <Route path='/about' element={<About {...aboutMeData} />} />
+                <Route path='/contacts' element={<Contacts />} />
             </Routes>
             <Footer />
         </BrowserRouter>
