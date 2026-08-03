@@ -1,50 +1,60 @@
-# React + TypeScript + Vite
+# Портфолио фронтенд-разработчика
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Это персональный веб-портфолио, реализованное на React + TypeScript с использованием Vite, styled-components и react-router-dom.
 
-Currently, two official plugins are available:
+## Что реализовано
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Современный SPA на React + TypeScript
+- Маршрутизация страниц с `react-router-dom`
+- Стилизация с `styled-components`
+- Анимации и появление блоков с `react-awesome-reveal`
+- Поддержка адаптивного меню для мобильных и десктоп экранов
+- Разделы:
+  - Главная страница
+  - Проекты
+  - О себе
+  - Контакты
+- Страница `Projects` с карточками основных проектов и мелких проектов
+- Боковые контакты и футер с внешними ссылками
 
-## Expanding the ESLint configuration
+## Стек технологий
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- `react` / `react-dom`
+- `typescript`
+- `vite`
+- `styled-components`
+- `react-router-dom`
+- `react-awesome-reveal`
+- `typewriter-effect`
+- `gh-pages` для деплоя
 
-- Configure the top-level `parserOptions` property like this:
+## Структура проекта
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- `src/main.tsx` — точка входа, подключение глобальных стилей
+- `src/App.tsx` — маршрутизация и базовая логика приложения
+- `src/styles/` — глобальные стили, темы и анимации
+- `src/components/` — повторно используемые UI-компоненты
+- `src/layout/` — основные страницы и макеты
+  - `header/` — шапка сайта и навигация
+  - `footer/` — подвал
+  - `pages/` — разделы `home`, `about`, `projects`, `contacts`
+- `public/elements/` — графические элементы дизайна
+- `src/accets/` — изображения и медиа ресурсы
+
+## Как запустить проект локально
+
+1. Установите зависимости:
+
+```bash
+pnpm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Запустите дев-сервер:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+pnpm dev
 ```
+
+3. Откройте в браузере адрес из вывода (`http://localhost:5173` или аналогичный)
+
+> В `App.tsx` используется `BrowserRouter basename="/portfolio"`, поэтому сайт настроен на запуск из поддиректории `portfolio` при деплое на GitHub Pages.
